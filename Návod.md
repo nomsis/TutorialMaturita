@@ -1,9 +1,12 @@
-1. Záčátek
-  Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je můžete upravit a nakonec i smazat. 
+# Úvod
+
+1. Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je můžete upravit a nakonec i smazat. 
 
 2. Výběr programu na aplikace
-    Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
+Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
     Android studio si můžete stáhnout zde: https://developer.android.com/studio 
+
+# Vytvoření a připojení databáze
 
 3. Výběr databáze
     Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. 
@@ -15,28 +18,33 @@
 
 5. Propojení android studia s vaším vytvořeným projektem ve FIREBASE
     V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na Connect to Firebase zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho.  Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. Pokud se vám neukáže zelená šipka, budete si to muset ručně nahrát. Nahrajeme tak, že si zkopírujeme danný požadavek a vložíme jej do Grandle Script -> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete. Poté půjdete na WEB vašeho projektu a kliknete na "Realtime database",  a kliknete na Create Database zde si vybere United States, dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko Enable. Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce  Rules a zde budete mít vypsané toto, a budete to muset změnit:
-    `{`\
-    `"rules": {` \
-    `".read": "now < 1644879600000",  // 2022-2-15`\
-   ` ".write": "now < 1644879600000",  // 2022-2-15`\
-    `}`\
-   ` }`\
+    
+    ```
+    {
+       "rules": { 
+          ".read": "now < 1644879600000",  // 2022-2-15
+          ".write": "now < 1644879600000",  // 2022-2-15
+       }
+    }
+    ```
     změníte na: 
-    `{`\
-    `"rules": {`\
-    `".read": true,`\
-    `".write": true`\
-     `}`\
-   ` }`\
+    ```
+    {
+       "rules": {
+          ".read": true,
+          ".write": true
+        }
+    }
+    ```
 a kliknete na "Publish".
-Tutoriál na propojení vašeho projektu s FIREBASE:
-https://www.youtube.com/watch?v=nep85PD8U7M
+
+Tutoriál na propojení vašeho projektu s FIREBASE: https://www.youtube.com/watch?v=nep85PD8U7M
 
 6.  Nastavení manifestu
-    Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu `("manifests->AndroidManifest.xml").` Definujeme to pomocí `<activity android:name=".AddRecept"/>`
-    `.AddRecept - je název třídy.` 
+    Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu `("manifests->AndroidManifest.xml").` Definujeme to pomocí `<activity android:name=".AddRecept"/>`, kde `.AddRecept` - je název třídy. 
 
 7.  Extends AppCompatActivity
+    
     Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost nastavíme pomocí "extends". "public class MainActivity extends AppCompatActivity"
     a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. Import vypadá takto:
     "import androidx.appcompat.app.AppCompatActivity;"
@@ -45,22 +53,31 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    Pomocí zobrazení "Design" přidáme "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako název položky v menu. V našem případě nastavíme na "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy zobrazena app:showAsAction="always".
    
     Zobrazeni menu pomocí kódu: 
-    `public boolean onCreateOptionsMenu(Menu menu){` \
-    `MenuInflater inflater = getMenuInflater();` \
-    `inflater.inflate(R.menu.main_menu, menu);` // main_menu" je název našeho menu \
-    `return true;}` \
+    ```java
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu); // "main_menu" je název našeho menu
+        return true;
+    }
+    ```
+
     zobrazíme menu, kód voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"` 
     
     Nastavení položek v menu:
     
-    `public boolean onOptionsItemSelected(@NonNull MenuItem item) {` \
-    `switch (item.getItemId()) {`\
-    `case R.id.home:` //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu \
-   ` Intent ht1 = new Intent(ReceptActivity.this, MainActivity.class);` \
-    `startActivity(ht1);` \
-    `return true;` \
-    `default:return super.onOptionsItemSelected(item); } }` \
-    nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu `"MainActivity".`
+    ```java
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+       switch (item.getItemId()) {
+          case R.id.home: //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu
+              Intent ht1 = new Intent(ReceptActivity.this, MainActivity.class);
+              startActivity(ht1);
+              return true;
+          default:return super.onOptionsItemSelected(item); 
+       } 
+    }
+    ```
+    
+    Nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu `"MainActivity".`
 
 
 9. Třída Recept
