@@ -1,9 +1,12 @@
-1. Záčátek
-  Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je můžete upravit a nakonec i smazat. 
+# Úvod
+
+1. Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je můžete upravit a nakonec i smazat. 
 
 2. Výběr programu na aplikace
-    Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
+Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
     Android studio si můžete stáhnout zde: https://developer.android.com/studio 
+
+# Vytvoření a připojení databáze
 
 3. Výběr databáze
     Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. 
@@ -15,28 +18,33 @@
 
 5. Propojení android studia s vaším vytvořeným projektem ve FIREBASE
     V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na Connect to Firebase zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho.  Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. Pokud se vám neukáže zelená šipka, budete si to muset ručně nahrát. Nahrajeme tak, že si zkopírujeme danný požadavek a vložíme jej do Grandle Script -> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete. Poté půjdete na WEB vašeho projektu a kliknete na "Realtime database",  a kliknete na Create Database zde si vybere United States, dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko Enable. Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce  Rules a zde budete mít vypsané toto, a budete to muset změnit:
-    `{`\
-    `"rules": {` \
-    `".read": "now < 1644879600000",  // 2022-2-15`\
-   ` ".write": "now < 1644879600000",  // 2022-2-15`\
-    `}`\
-   ` }`\
+    
+    ```
+    {
+       "rules": { 
+          ".read": "now < 1644879600000",  // 2022-2-15
+          ".write": "now < 1644879600000",  // 2022-2-15
+       }
+    }
+    ```
     změníte na: 
-    `{`\
-    `"rules": {`\
-    `".read": true,`\
-    `".write": true`\
-     `}`\
-   ` }`\
+    ```
+    {
+       "rules": {
+          ".read": true,
+          ".write": true
+        }
+    }
+    ```
 a kliknete na "Publish".
-Tutoriál na propojení vašeho projektu s FIREBASE:
-https://www.youtube.com/watch?v=nep85PD8U7M
+
+Tutoriál na propojení vašeho projektu s FIREBASE: https://www.youtube.com/watch?v=nep85PD8U7M
 
 6.  Nastavení manifestu
-    Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu `("manifests->AndroidManifest.xml").` Definujeme to pomocí `<activity android:name=".AddRecept"/>`
-    `.AddRecept - je název třídy.` 
+    Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu `("manifests->AndroidManifest.xml").` Definujeme to pomocí `<activity android:name=".AddRecept"/>`, kde `.AddRecept` - je název třídy. 
 
 7.  Extends AppCompatActivity
+    
     Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost nastavíme pomocí "extends". "public class MainActivity extends AppCompatActivity"
     a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. Import vypadá takto:
     "import androidx.appcompat.app.AppCompatActivity;"
@@ -45,62 +53,76 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    Pomocí zobrazení "Design" přidáme "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako název položky v menu. V našem případě nastavíme na "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy zobrazena app:showAsAction="always".
    
     Zobrazeni menu pomocí kódu: 
-    `public boolean onCreateOptionsMenu(Menu menu){` \
-    `MenuInflater inflater = getMenuInflater();` \
-    `inflater.inflate(R.menu.main_menu, menu);` // main_menu" je název našeho menu \
-    `return true;}` \
+    ```java
+    public boolean onCreateOptionsMenu(Menu menu){
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.main_menu, menu); // "main_menu" je název našeho menu
+        return true;
+    }
+    ```
+
     zobrazíme menu, kód voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"` 
     
     Nastavení položek v menu:
     
-    `public boolean onOptionsItemSelected(@NonNull MenuItem item) {` \
-    `switch (item.getItemId()) {`\
-    `case R.id.home:` //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu \
-   ` Intent ht1 = new Intent(ReceptActivity.this, MainActivity.class);` \
-    `startActivity(ht1);` \
-    `return true;` \
-    `default:return super.onOptionsItemSelected(item); } }` \
-    nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu `"MainActivity".`
+    ```java
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+       switch (item.getItemId()) {
+          case R.id.home: //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu
+              Intent ht1 = new Intent(ReceptActivity.this, MainActivity.class);
+              startActivity(ht1);
+              return true;
+          default:return super.onOptionsItemSelected(item); 
+       } 
+    }
+    ```
+    
+    Nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu `"MainActivity".`
 
 
 9. Třída Recept
     Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. Bude to vypadat takhle:
-    `public class Recept {` \
+    ```java
+    public class Recept {
 
-    `String Nazev;` // Vytvoříme si proměnu String s název "Nazev" což je vlastně textová proměná \
-    `String Suroviny;` // Vytvoříme si proměnu String s název "Suroviny" což je vlastně textová proměná \
-    `String Postup;` // Vytvoříme si proměnu String s název "Postup" což je vlastně textová proměná \
+        String Nazev; // Vytvoříme si proměnu String s název "Nazev" což je vlastně textová proměná
+        String Suroviny; // Vytvoříme si proměnu String s název "Suroviny" což je vlastně textová proměná
+        String Postup; // Vytvoříme si proměnu String s název "Postup" což je vlastně textová proměná
     
-    `public Recept()` // vytvoříme si konstruktor Recept \
-    `{` \
-   `}`\
+        public Recept() // vytvoříme si konstruktor Recept
+        {
+        }
     
-    `public String getNazev() {` //pro získání hodnoty Nazev\
-        `return Nazev;` // vrací hodnotu Nazvu\
-    `}`
+        public String getNazev() { //pro získání hodnoty Nazev
+           return Nazev; // vrací hodnotu Nazvu
+        }
 
-    `public void setNazev(String nazev) {` // pro nastavení hodnoty Nazev\
-        `Nazev = nazev;` // z parametru, který nastavíme to uloží do proměnné.\
-    `}`
+        public void setNazev(String nazev) { // pro nastavení hodnoty Nazev
+            Nazev = nazev; // z parametru, který nastavíme to uloží do proměnné.
+        }
 
-    `public String getSuroviny() {` // pro získání hodnoty Suroviny\
-        `return Suroviny;` // vrací hodnotu Suroviny\
-    `}`
+        public String getSuroviny() { // pro získání hodnoty Suroviny
+           return Suroviny; // vrací hodnotu Suroviny
+        }
 
-    `public void setSuroviny(String suroviny) {` // pro nastavení hodnoty Suroviny\
-        `Suroviny = suroviny;` // z parametru, který nastavíme to uloží do proměnné.\
-    `}`
+        public void setSuroviny(String suroviny) { // pro nastavení hodnoty Suroviny
+            Suroviny = suroviny; // z parametru, který nastavíme to uloží do proměnné.
+        }
 
-    `public String getPostup() {` // pro získání hodnoty Postup\
-        `return Postup;` // vrací hodnotu Postup\
-    `}`
+        public String getPostup() { // pro získání hodnoty Postup
+           return Postup; // vrací hodnotu Postup
+        }
 
-    `public void setPostup(String postup) {` // pro nastavení hodnoty Postup\
-        `Postup = postup;` // z parametru, který nastavíme to uloží do proměnné.\
-    `}`\
-   `}`
+        public void setPostup(String postup) { // pro nastavení hodnoty Postup
+            Postup = postup; // z parametru, který nastavíme to uloží do proměnné.
+        }
+    }
+    ```
+    
 10. Ukládání dat do vaší databáze
+
       Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze.
+      
       Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
     
      `public class AddRecept extends AppCompatActivity {`\
@@ -131,83 +153,89 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         `startActivity(ht1);` // startuje tu danou operaci\
         `}`\
         `}`
+        
 11. Výpis dat z databáze
+
     Výpis se bude skládat ze dvou částí první část bude ve třídě MainActivity a druhá část se bude skládat ze třídy ReceptAdapter. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat
     
     Třída MainActivity se bude skládat z:
-
-    `EditText nazev, suroviny, postup;` // Zde si definujete vaše layout stránky\
-    `RecyclerView recyclerView;` // Zde si definujete pojmenování vašeho recyclerView\
-    `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší \
-    databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.\
-    `ReceptAdapter adapter;` // Zde si definujete pojmenování vašeho adapteru
+    ```java
+    EditText nazev, suroviny, postup; // Zde si definujete vaše layout stránky
+    RecyclerView recyclerView; // Zde si definujete pojmenování vašeho recyclerView
+    DatabaseReference reff; // DatabaseReference vám umožnuje konkrétní umístění ve vaší 
+        // databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.
+    ReceptAdapter adapter; // Zde si definujete pojmenování vašeho adapteru
     
-    `@Override` // upozorní, že se přepisuje metoda mateřské třídy\
-    `protected void onCreate(Bundle savedInstanceState) {`\
-        `super.onCreate(savedInstanceState);`\
-        `setContentView(R.layout.recepts);` // nastavíme si layout stránku, kterou chcete zobrazit\
-        `reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"\
-        `recyclerView = findViewById(R.id.recyclerRecepts);` // uložíte si recyclerView, který budete používat
-        //Slouží k zobrazení vašich přidaných dat do databáze a nastavujete ho na lineární zobrazení\
-        `recyclerView.setLayoutManager(`\
-                `new LinearLayoutManager(this));`
+    @Override // upozorní, že se přepisuje metoda mateřské třídy
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.recepts); // nastavíme si layout stránku, kterou chcete zobrazit
+        reff = FirebaseDatabase.getInstance().getReference("Recept"); // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"
+        recyclerView = findViewById(R.id.recyclerRecepts); // uložíte si recyclerView, který budete používat
+        //Slouží k zobrazení vašich přidaných dat do databáze a nastavujete ho na lineární zobrazení
+        recyclerView.setLayoutManager(
+                new LinearLayoutManager(this));
        
-       //Když jsou data přidána, odebrána nebo změněna, tyto aktualizace se automaticky aplikují na vaše                  uživatelské rozhraní v reálném čase.\
-        `FirebaseRecyclerOptions<Recept> options1`\
-                `= new FirebaseRecyclerOptions.Builder<Recept>()`\
-                `.setQuery(reff, Recept.class)`\
-                `.build();`\
-        `adapter = new ReceptAdapter(options1);` // Vytvoříme instanci třídy ReceptAdapter\
-        `recyclerView.setAdapter(adapter);`  \
-        `nazev =  findViewById(R.id.editReceptName);` // do nazev ukládáte položku z vašeho layoutu pomocí id.\
-        `suroviny = findViewById(R.id.editReceptResources);` // do suroviny ukládáte položku z vašeho layoutu pomocí id.\
-        `postup =  findViewById(R.id.editReceptProcess);` // do postup ukládáte položku z vašeho layoutu pomocí id.\
-        `}`
-    //Zde si spouštítě váš adaptér \
-     `@Override`\
-    `protected void onStart() {`\
-        `super.onStart();`\
-        `adapter.startListening();`\
-    `}`\
-    //Zde stopujete váš adaptér\
-    `@Override`\
-    `protected void onStop() {`\
-        `super.onStop();`\
-        `adapter.stopListening();`\
-    `}`
+        //Když jsou data přidána, odebrána nebo změněna, tyto aktualizace se automaticky aplikují na vaše uživatelské rozhraní v reálném čase.
+        FirebaseRecyclerOptions<Recept> options1
+                = new FirebaseRecyclerOptions.Builder<Recept>()
+                .setQuery(reff, Recept.class)
+                .build();
+        adapter = new ReceptAdapter(options1); // Vytvoříme instanci třídy ReceptAdapter
+        recyclerView.setAdapter(adapter);
+        nazev =  findViewById(R.id.editReceptName); // do nazev ukládáte položku z vašeho layoutu pomocí id.
+        suroviny = findViewById(R.id.editReceptResources); // do suroviny ukládáte položku z vašeho layoutu pomocí id.
+        postup =  findViewById(R.id.editReceptProcess); // do postup ukládáte položku z vašeho layoutu pomocí id.
+    }
+    //Zde si spouštítě váš adaptér
+    @Override
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
+    //Zde stopujete váš adaptér
+    @Override
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
+    ```
     
-    Druhá část vypísu dat, která je ve třídě `ReceptAdapter:`\
-    `public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) {` // Konstruktor vašeho Adapteru\
-    `super(options);`\
-    `}`\
-    //nastavuje některá soukromá pole, která má RecyclerView používat.\
-    `@Override`\
-    `protected void onBindViewHolder(@NonNull receptViewholder holder,int position, Recept model) {`\
-        `holder.nazev.setText(model.getNazev());`\
-    `}`\
-    //Slouží k vytvoření nového RecyclerView.ViewHoldera inicializuje některá soukromá pole, která má RecyclerView použít.\
-    `public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {`\
-   `View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);`\
-        `return new ReceptAdapter.receptViewholder(view);`\
-    `}`\
-    `class receptViewholder extends RecyclerView.ViewHolder   {`\
-        `TextView nazev, suroviny, postup;`\
-        `public receptViewholder(@NonNull View itemView)`\
-        `{`\
-            `super(itemView);`\
-            `nazev= itemView.findViewById(R.id.Nazev);`\
-            `itemView.findViewById(R.id.btnRozklik).setOnClickListener(new View.OnClickListener() {`\
-                `@Override`\
-                `public void onClick(View view) {`\
-                    `Intent ht1 = new Intent( view.getContext(), Activity.class);`\
-                    `ht1.putExtra("nazev", nazev.getText());`\
-                    `view.getContext().startActivity(ht1);`\
-                    `FirebaseDatabase.getInstance().getReference().child("Recept");`\
-                `}`\
-            `});`\
-        `}`\
-   `}`
-    
+    Druhá část vypísu dat, která je ve třídě `ReceptAdapter:
+    ```java
+    public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) { // Konstruktor vašeho Adapteru
+        super(options);
+    }
+    //nastavuje některá soukromá pole, která má RecyclerView používat.
+    @Override
+    protected void onBindViewHolder(@NonNull receptViewholder holder,int position, Recept model) {
+        holder.nazev.setText(model.getNazev());
+    }
+    //Slouží k vytvoření nového RecyclerView.ViewHoldera inicializuje některá soukromá pole, která má RecyclerView použít.
+    public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+         View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);
+         return new ReceptAdapter.receptViewholder(view);
+    }
+
+    class receptViewholder extends RecyclerView.ViewHolder   {
+        TextView nazev, suroviny, postup;
+        public receptViewholder(@NonNull View itemView)
+        {
+            super(itemView);
+            nazev= itemView.findViewById(R.id.Nazev);
+            itemView.findViewById(R.id.btnRozklik).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent ht1 = new Intent( view.getContext(), Activity.class);
+                    ht1.putExtra("nazev", nazev.getText());
+                    view.getContext().startActivity(ht1);
+                    FirebaseDatabase.getInstance().getReference().child("Recept");
+                }
+            });
+        }
+   }
+   ```
+   
 12. Třída EditActivity
     V této třídě jsou funkce na editování a mazání dat.
 
@@ -288,11 +316,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         `Intent ht1 = new Intent(EditActivity.this, MainActivity.class);`  // popisujeme operaci, která se má provést\
         `startActivity(ht1);`  // startuje tu danou operaci\
     `}`
-
-
-
-
-
+    
 
 
     
