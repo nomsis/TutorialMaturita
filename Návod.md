@@ -217,6 +217,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    `View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);`\       
        `return new ReceptAdapter.receptViewholder(view);`\
     `}`\     
+    
     `class receptViewholder extends RecyclerView.ViewHolder   {`\
         `TextView nazev, suroviny, postup;`\              
        
