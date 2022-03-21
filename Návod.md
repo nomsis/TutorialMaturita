@@ -4,7 +4,7 @@
 
 2. Výběr programu na aplikace
     
-     Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku       Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
+     Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku           Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
     Android studio si můžete stáhnout zde: https://developer.android.com/studio 
 
 3. Výběr databáze
@@ -17,11 +17,11 @@
    
     Vytvoříme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
     
-4. Vytvoření projektu ve FIREBASE
+5. Vytvoření projektu ve FIREBASE
  
     Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte váš název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
 
-5. Propojení android studia s vaším vytvořeným projektem ve FIREBASE
+6. Propojení android studia s vaším vytvořeným projektem ve FIREBASE
 
     V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na Connect to Firebase zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho.  Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. Pokud se vám neukáže zelená šipka, budete si to muset ručně nahrát. Nahrajeme tak, že si zkopírujeme danný požadavek a vložíme jej do Grandle Script -> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete. Poté půjdete na WEB vašeho projektu a kliknete na "Realtime database",  a kliknete na Create Database zde si vybere United States, dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko Enable. Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce  Rules a zde budete mít vypsané toto, a budete to muset změnit:
     
