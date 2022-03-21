@@ -1,15 +1,15 @@
 1. Záčátek
 
-Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je můžete upravit a nakonec i smazat. 
+    Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu        byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je    můžete upravit a nakonec i smazat. 
 
 2. Výběr programu na aplikace
     
-    Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku Java a     nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
+        Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku       Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
     Android studio si můžete stáhnout zde: https://developer.android.com/studio 
 
 3. Výběr databáze
 
-    Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. 
+        Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. 
     Budete si muset vytvořit účet zde, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE:
     https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
     
@@ -76,7 +76,9 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 
 9. Třída Recept
+    
     Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. Bude to vypadat takhle:
+    
     `public class Recept {` 
 
     `String Nazev;` // Vytvoříme si proměnu String s název "Nazev" což je vlastně textová proměná \
@@ -112,7 +114,9 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `}`\
    `}`
 10. Ukládání dat do vaší databáze
+      
       Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze.
+      
       Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
     
      `public class AddRecept extends AppCompatActivity {`\
@@ -144,6 +148,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         `}`\
         `}`
 11. Výpis dat z databáze
+    
     Výpis se bude skládat ze dvou částí první část bude ve třídě MainActivity a druhá část se bude skládat ze třídy ReceptAdapter. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat
     
     Třída MainActivity se bude skládat z:
@@ -189,7 +194,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `}`
     
     Druhá část vypísu dat, která je ve třídě `ReceptAdapter:`\
-    `public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) {` // Konstruktor vašeho Adapteru\
+   
+   `public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) {` // Konstruktor vašeho Adapteru\
     `super(options);`\
     `}`\
     //nastavuje některá soukromá pole, která má RecyclerView používat.\
@@ -221,7 +227,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    `}`
     
 12. Třída EditActivity
-    V této třídě jsou funkce na editování a mazání dat.
+   
+   V této třídě jsou funkce na editování a mazání dat.
 
     `public class EditActivity extends AppCompatActivity {`
     
@@ -268,6 +275,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `}`
 
 13. Mazání dat
+    
     V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu EditActivity v které mám funkce na mazání a upravování dat. 
     Funkce může vypadat nějak takto:
 
@@ -284,6 +292,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `}`
 
 14. Úprava dat
+    
     V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i smazání dat mám v jedné tříde EditActivity.
  
     `public void editDat(View view) {` \
