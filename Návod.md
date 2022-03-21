@@ -209,6 +209,7 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
     Druhá část vypísu dat, která je ve třídě `ReceptAdapter:`\
    
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
+   
    `public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) {` // Konstruktor vašeho Adapteru\    
     
     `super(options);`\
