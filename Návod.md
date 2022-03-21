@@ -214,6 +214,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     //Slouží k vytvoření nového RecyclerView.ViewHoldera inicializuje některá soukromá pole, která má RecyclerView použít.\    
     
     `public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {`\  
+   
    `View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);`\       
        `return new ReceptAdapter.receptViewholder(view);`\
     `}`\     
