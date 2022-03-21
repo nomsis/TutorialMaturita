@@ -326,25 +326,26 @@ Druhá část vypísu dat, která je ve třídě ReceptAdapter:
     V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i smazání dat mám v jedné tříde EditActivity.     
 ```   
    
-   public void editDat(View view) {
+   public void editDat(View view) {        
+        recept = new Recept();  // Zde si vytvoříme novou instanci třídy Recept
+        reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"
+        recept.setNazev(textNazev.getText().toString().trim());` // uloží nám do proměnné Nazev ve třídě recept obsah v závorce
+        recept.setSuroviny(textSuroviny.getText().toString().trim()); //uloží nám do proměnné Suroviny ve třídě recept obsah v závorce
+        recept.setPostup(textPostup.getText().toString().trim());` // uloží nám do proměnné Postup ve třídě recept obsah v závorce
         
-        `recept = new Recept();`  // Zde si vytvoříme novou instanci třídy Recept.\
-        `reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"\
-        `recept.setNazev(textNazev.getText().toString().trim());` // uloží nám do proměnné Nazev ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)\
-        `recept.setSuroviny(textSuroviny.getText().toString().trim());` //uloží nám do proměnné Suroviny ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)\
-        `recept.setPostup(textPostup.getText().toString().trim());` // uloží nám do proměnné Postup ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)\
-        //Tato část kódu dělá to, že když chceme cokoliv změnit, tak se vymaže celý recept a vloží se tam nový s novou hodnotou. \
-        `reff.child(recept.getNazev()).setValue(recept);` \
-        `if(!nazev2.equals(recept.getNazev()))`  \
-        `reff.child(nazev2).removeValue();`  \
-        `Toast.makeText(EditActivity.this, "Aktualizuji data.", Toast.LENGTH_SHORT).show();` // Výpis hlášky po úpravě dat\
-        `Intent ht1 = new Intent(EditActivity.this, MainActivity.class);`  // popisujeme operaci, která se má provést\
-        `startActivity(ht1);`  // startuje tu danou operaci\
-    `}`
+        //Tato část kódu dělá to, že když chceme cokoliv změnit, tak se vymaže celý recept a vloží se tam nový s novou hodnotou. 
+        reff.child(recept.getNazev()).setValue(recept);
+        if(!nazev2.equals(recept.getNazev()))
+        reff.child(nazev2).removeValue();
+        Toast.makeText(EditActivity.this, "Aktualizuji data.", Toast.LENGTH_SHORT).show(); // Výpis hlášky po úpravě dat
+        Intent ht1 = new Intent(EditActivity.this, MainActivity.class); // popisujeme operaci, která se má provést
+        startActivity(ht1);  // startuje tu danou operaci
+    }
 
 
-
-Activity.xml 
+``` 
+Activity.xml
+``` 
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
