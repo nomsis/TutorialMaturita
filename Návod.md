@@ -77,7 +77,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 9. Třída Recept
     Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. Bude to vypadat takhle:
-    `public class Recept {` \
+    `public class Recept {` 
 
     `String Nazev;` // Vytvoříme si proměnu String s název "Nazev" což je vlastně textová proměná \
     `String Suroviny;` // Vytvoříme si proměnu String s název "Suroviny" což je vlastně textová proměná \
@@ -85,7 +85,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
     `public Recept()` // vytvoříme si konstruktor Recept \
     `{` \
-   `}`\
+   `}`
     
     `public String getNazev() {` //pro získání hodnoty Nazev\
         `return Nazev;` // vrací hodnotu Nazvu\
