@@ -4,7 +4,7 @@
 
 2. Výběr programu na aplikace
     
-        Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku       Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
+     Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku       Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
     Android studio si můžete stáhnout zde: https://developer.android.com/studio 
 
 3. Výběr databáze
