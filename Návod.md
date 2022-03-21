@@ -128,7 +128,8 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
       
       Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
     
-     `public class AddRecept extends AppCompatActivity {`\
+    ```     
+     public class AddRecept extends AppCompatActivity {
         
         `EditText nazev, suroviny, postup;` // Zde si definujete vaše layout stránky\
         `Recept recept;` // Zde si definujete vaši třídu Recept \
