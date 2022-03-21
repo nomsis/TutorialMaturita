@@ -89,19 +89,13 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
     `public Recept()` // vytvoříme si konstruktor Recept \
     `{` \
-   `}`
-    
-    
+   `}`    
     `public String getNazev() {` //pro získání hodnoty Nazev\
         `return Nazev;` // vrací hodnotu Nazvu\
-    `}`
-
-   
+    `}`  
    `public void setNazev(String nazev) {` // pro nastavení hodnoty Nazev\
         `Nazev = nazev;` // z parametru, který nastavíme to uloží do proměnné.\
-    `}`
-
-   
+    `}`   
    `public String getSuroviny() {` // pro získání hodnoty Suroviny\
         `return Suroviny;` // vrací hodnotu Suroviny\
     `}`
