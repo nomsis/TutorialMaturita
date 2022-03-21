@@ -9,11 +9,13 @@
 
 3. Výběr databáze
     
-    Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. 
+    Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. Databáze je zdarma, ale doporučuji zkontrolovat po     vytvoření projektu ve Firebase, že vedle názvu máte "Spark plan" což znamená, že nebudete platit žádné poplatky.
     Budete si muset vytvořit účet zde, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE:
     https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
     
-4. Vytvoření projektu v Android Studiu  
+4. Vytvoření projektu v Android Studiu 
+   
+    Vytvoříme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
     
 4. Vytvoření projektu ve FIREBASE
  
