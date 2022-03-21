@@ -275,6 +275,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 13. Mazání dat   
     V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu EditActivity v které mám funkce na mazání a upravování dat. 
     Funkce může vypadat nějak takto:
+     
      `public void odstranitData(View view){`  
         `recept = new Recept();`  // Zde si vytvoříme novou instanci třídy Recept.\
         `reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept", a kde se daná data mají vymazat.\
@@ -289,7 +290,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 14. Úprava dat    
     V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i smazání dat mám v jedné tříde EditActivity.     
-    `public void editDat(View view) {` \
+   
+   `public void editDat(View view) {` \
         `recept = new Recept();`  // Zde si vytvoříme novou instanci třídy Recept.\
         `reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"\
         `recept.setNazev(textNazev.getText().toString().trim());` // uloží nám do proměnné Nazev ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)\
