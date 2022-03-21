@@ -47,7 +47,7 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
 6.  Nastavení manifestu
 
     Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu 
-    ("manifests->AndroidManifest.xml").
+    ```("manifests->AndroidManifest.xml").
     Definujeme to pomocí 
     ```<activity android:name=".AddRecept"/> ".AddRecept - je název třídy." 
 
@@ -62,9 +62,10 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
    
     Zobrazeni menu pomocí kódu: 
     
-    `public boolean onCreateOptionsMenu(Menu menu){` \
+    ```
+    public boolean onCreateOptionsMenu(Menu menu){
     
-    `MenuInflater inflater = getMenuInflater();` \
+    MenuInflater inflater = getMenuInflater();
     `inflater.inflate(R.menu.main_menu, menu);` // main_menu" je název našeho menu \
     `return true;}` \
     zobrazíme menu, kód voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"` 
