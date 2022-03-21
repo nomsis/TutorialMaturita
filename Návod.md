@@ -279,7 +279,7 @@ Druhá část vypísu dat, která je ve třídě ReceptAdapter:
         reff = FirebaseDatabase.getInstance().getReference("Recept").child(nazev2); // uložíme si, který objekt v databázi budeme upravovat
         reff.addValueEventListener(new ValueEventListener() { 
            
- // Tento kód zkontroluje zda existují data , pak načte data v nejhorším případě , pokud se stane něco jiného, zachytí tuto chybu a nezpůsobí pád aplikace
+//Tento kód zkontroluje zda existují data , pak načte data v nejhorším případě , pokud se stane něco jiného, zachytí tuto chybu a nezpůsobí pád aplikace
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot){
                 try {
@@ -305,12 +305,13 @@ Druhá část vypísu dat, která je ve třídě ReceptAdapter:
             }
        });
     }
-    
+```    
 13. Mazání dat   
     V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu EditActivity v které mám funkce na mazání a upravování dat. 
     Funkce může vypadat nějak takto.
+``` 
      
-     `public void odstranitData(View view){`  
+     public void odstranitData(View view){ 
         
         `recept = new Recept();`  // Zde si vytvoříme novou instanci třídy Recept.\
         `reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept", a kde se daná data mají vymazat.\
