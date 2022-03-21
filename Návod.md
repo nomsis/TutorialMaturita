@@ -200,12 +200,13 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
     Druhá část vypísu dat, která je ve třídě `ReceptAdapter:`\
    
-   `public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) {` // Konstruktor vašeho Adapteru\
-    
+   
+   `public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) {` // Konstruktor vašeho Adapteru\    
     `super(options);`\
     `}`\
     //nastavuje některá soukromá pole, která má RecyclerView používat.\
     `@Override`\
+    
     `protected void onBindViewHolder(@NonNull receptViewholder holder,int position, Recept model) {`\
         `holder.nazev.setText(model.getNazev());`\
     `}`\
