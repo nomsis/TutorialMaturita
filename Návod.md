@@ -173,6 +173,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
                 `new LinearLayoutManager(this));`
        
        //Když jsou data přidána, odebrána nebo změněna, tyto aktualizace se automaticky aplikují na vaše                  uživatelské rozhraní v reálném čase.\
+        
         `FirebaseRecyclerOptions<Recept> options1`\
                 `= new FirebaseRecyclerOptions.Builder<Recept>()`\
                 `.setQuery(reff, Recept.class)`\
@@ -183,6 +184,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         `suroviny = findViewById(R.id.editReceptResources);` // do suroviny ukládáte položku z vašeho layoutu pomocí id.\
         `postup =  findViewById(R.id.editReceptProcess);` // do postup ukládáte položku z vašeho layoutu pomocí id.\
         `}`
+    
     //Zde si spouštítě váš adaptér \
      `@Override`\
     
