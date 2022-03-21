@@ -126,10 +126,10 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
       
       Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze.
       
-Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
+        Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
     
- ```     
- public class AddRecept extends AppCompatActivity {
+        ```     
+    public class AddRecept extends AppCompatActivity {
         
     EditText nazev, suroviny, postup; // Zde si definujete vaše layout stránky
     Recept recept; // Zde si definujete vaši třídu Recept 
@@ -167,9 +167,9 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
     
     Výpis se bude skládat ze dvou částí první část bude ve třídě MainActivity a druhá část se bude skládat ze třídy ReceptAdapter. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat
     
-    Třída MainActivity se bude skládat z:
+            Třída MainActivity se bude skládat z:
 
-   ``` 
+        ``` 
    EditText nazev, suroviny, postup; // Zde si definujete vaše layout stránky
    RecyclerView recyclerView; // Zde si definujete pojmenování vašeho recyclerView
    DatabaseReference reff; //DatabaseReference vám umožnuje konkrétní umístění ve vašídatabázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.
@@ -213,8 +213,8 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
         super.onStop();
         adapter.stopListening();
     }
-    ```        
-    Druhá část vypísu dat, která je ve třídě ReceptAdapter: 
+        ```        
+        Druhá část vypísu dat, která je ve třídě ReceptAdapter: 
   
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
