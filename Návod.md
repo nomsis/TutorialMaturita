@@ -196,6 +196,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     Druhá část vypísu dat, která je ve třídě `ReceptAdapter:`\
    
    `public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) {` // Konstruktor vašeho Adapteru\
+    
     `super(options);`\
     `}`\
     //nastavuje některá soukromá pole, která má RecyclerView používat.\
@@ -204,12 +205,14 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         `holder.nazev.setText(model.getNazev());`\
     `}`\
     //Slouží k vytvoření nového RecyclerView.ViewHoldera inicializuje některá soukromá pole, která má RecyclerView použít.\
+    
     `public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {`\
    `View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);`\
         `return new ReceptAdapter.receptViewholder(view);`\
     `}`\
     `class receptViewholder extends RecyclerView.ViewHolder   {`\
         `TextView nazev, suroviny, postup;`\
+        
         `public receptViewholder(@NonNull View itemView)`\
         `{`\
             `super(itemView);`\
@@ -294,6 +297,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i smazání dat mám v jedné tříde EditActivity.     
    
    `public void editDat(View view) {` \
+        
         `recept = new Recept();`  // Zde si vytvoříme novou instanci třídy Recept.\
         `reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"\
         `recept.setNazev(textNazev.getText().toString().trim());` // uloží nám do proměnné Nazev ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)\
