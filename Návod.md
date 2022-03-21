@@ -258,49 +258,52 @@ Druhá část vypísu dat, která je ve třídě ReceptAdapter:
 12. Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat.   
    
-   `public class EditActivity extends AppCompatActivity {`
+   ```
+   public class EditActivity extends AppCompatActivity {
     
-    `String Nazev, Suroviny, Postup, nazev2;` // vytvoříme textové proměnné\
-    `EditText textNazev, textSuroviny, textPostup;`  // políčka, kde se píšou dané texty.\
-    `EditText editTextZapsat;` // zapíše se daná hodnota\
-    `Button btnZapsat;` // Zde si definujete id vašeho vytvořeného Buttonu\
-    `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění       databáze.\
-    `Recept recept;` // Zde si definujete vaši třídu Recept  
+    String Nazev, Suroviny, Postup, nazev2; // vytvoříme textové proměnné
+    EditText textNazev, textSuroviny, textPostup;  // políčka, kde se píšou dané texty.
+    EditText editTextZapsat; // zapíše se daná hodnota
+    Button btnZapsat; // Zde si definujete id vašeho vytvořeného Buttonu
+    DatabaseReference reff; // DatabaseReference vám umožnuje konkrétní umístění ve vaší databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.
+    Recept recept; // Zde si definujete vaši třídu Recept  
 
-    `@Override`\
-    `protected void onCreate(Bundle savedInstanceState) {`\
-        `super.onCreate(savedInstanceState);`\
-        `setContentView(R.layout.edit_activity);` // Nastavíte, stránku kterou chcete zobrazit\
-        `Intent ht2= getIntent();` // Získáme Intent
-        `Bundle b = ht2.getExtras();` // A tady uložíme do Bundle b ty extras z Intent, které jsme tam vložili\
-        `nazev2 = (String) b.get("nazev2");` // do nazev2 uložíme hodnotu "nazev2", které je v balíčku b\
-        `reff = FirebaseDatabase.getInstance().getReference("Recept").child(nazev2);` // uložíme si, který objekt v databázi budeme upravovat\
-        `reff.addValueEventListener(new ValueEventListener() { `\
-           // Tento kód zkontroluje zda existují data , pak načte data v nejhorším případě , pokud se stane něco jiného, zachytí tuto chybu a nezpůsobí pád aplikace\
-            `@Override`\
-            `public void onDataChange(@NonNull DataSnapshot dataSnapshot){`\
-                `try {`\
-                    `if(dataSnapshot.exists())`\
-                    `{`\
-                       `Nazev = dataSnapshot.child("nazev").getValue().toString();` // Do proměnné název, uložíme hodnotu nazvu dané položky v databázi\
-                        `Suroviny= dataSnapshot.child("suroviny").getValue().toString();`\
-                        `Postup  = dataSnapshot.child("postup").getValue().toString();`\
-                        `textNazev = findViewById(R.id.editNazev);` \
-                        `textSuroviny = findViewById(R.id.editSuroviny);`\
-                        `textPostup =  findViewById(R.id.editPostup);`\
-                        `textNazev.setText(Nazev);` // nastaví textu Nazev hodnotu, kterou jsme mu určili\
-                        `textSuroviny.setText(Suroviny);`\
-                       ` textPostup.setText(Postup);`\
-                    `}`\
-                `}catch (NullPointerException e){`\
-                    `e.printStackTrace();`\
-               `}`\
-            `}`\
-            `@Override`\
-            `public void onCancelled(@NonNull DatabaseError databaseError){`\
-            `}`\
-       `});`\
-    `}`
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.edit_activity); // Nastavíte, stránku kterou chcete zobrazit
+        Intent ht2= getIntent(); // Získáme Intent
+        Bundle b = ht2.getExtras(); // A tady uložíme do Bundle b ty extras z Intent, které jsme tam vložili
+        nazev2 = (String) b.get("nazev2"); // do nazev2 uložíme hodnotu "nazev2", které je v balíčku b
+        reff = FirebaseDatabase.getInstance().getReference("Recept").child(nazev2); // uložíme si, který objekt v databázi budeme upravovat
+        reff.addValueEventListener(new ValueEventListener() { 
+           
+ // Tento kód zkontroluje zda existují data , pak načte data v nejhorším případě , pokud se stane něco jiného, zachytí tuto chybu a nezpůsobí pád aplikace
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot){
+                try {
+                    if(dataSnapshot.exists())
+                    {
+                       Nazev = dataSnapshot.child("nazev").getValue().toString(); // Do proměnné název, uložíme hodnotu nazvu dané položky v databázi
+                       Suroviny= dataSnapshot.child("suroviny").getValue().toString();
+                       Postup  = dataSnapshot.child("postup").getValue().toString();
+                       textNazev = findViewById(R.id.editNazev);
+                       textSuroviny = findViewById(R.id.editSuroviny);
+                       textPostup =  findViewById(R.id.editPostup);
+                       textNazev.setText(Nazev);` // nastaví textu Nazev hodnotu, kterou jsme mu určili
+                       textSuroviny.setText(Suroviny);
+                       textPostup.setText(Postup);
+                    }
+                }catch (NullPointerException e){
+                    e.printStackTrace();
+               }
+            }
+            
+            @Override
+            `public void onCancelled(@NonNull DatabaseError databaseError){
+            }
+       });
+    }
     
 13. Mazání dat   
     V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu EditActivity v které mám funkce na mazání a upravování dat. 
