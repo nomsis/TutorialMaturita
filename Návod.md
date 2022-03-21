@@ -219,6 +219,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `}`\     
     `class receptViewholder extends RecyclerView.ViewHolder   {`\
         `TextView nazev, suroviny, postup;`\              
+       
        `public receptViewholder(@NonNull View itemView)`\
         `{`\
             `super(itemView);`\
