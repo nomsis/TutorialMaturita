@@ -14,12 +14,13 @@ Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použit
     https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
     
 4. Vytvoření projektu ve FIREBASE
-5. 
+ 
     Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte váš název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
 
 5. Propojení android studia s vaším vytvořeným projektem ve FIREBASE
 
     V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na Connect to Firebase zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho.  Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. Pokud se vám neukáže zelená šipka, budete si to muset ručně nahrát. Nahrajeme tak, že si zkopírujeme danný požadavek a vložíme jej do Grandle Script -> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete. Poté půjdete na WEB vašeho projektu a kliknete na "Realtime database",  a kliknete na Create Database zde si vybere United States, dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko Enable. Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce  Rules a zde budete mít vypsané toto, a budete to muset změnit:
+    
     `{`\
     `"rules": {` \
     `".read": "now < 1644879600000",  // 2022-2-15`\
@@ -33,21 +34,23 @@ Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použit
     `".write": true`\
      `}`\
    ` }`\
+   
 a kliknete na "Publish".
 Tutoriál na propojení vašeho projektu s FIREBASE:
 https://www.youtube.com/watch?v=nep85PD8U7M
 
 6.  Nastavení manifestu
-    Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu `("manifests->AndroidManifest.xml").` Definujeme to pomocí `<activity android:name=".AddRecept"/>`
-    `.AddRecept - je název třídy.` 
+
+    Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu `("manifests->AndroidManifest.xml").` Definujeme to pomocí     `<activity android:name=".AddRecept"/>` `.AddRecept - je název třídy.` 
 
 7.  Extends AppCompatActivity
-    Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost nastavíme pomocí "extends". "public class MainActivity extends AppCompatActivity"
+  
+    Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost             nastavíme pomocí "extends". "public class MainActivity extends AppCompatActivity"
     a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. Import vypadá takto:
     "import androidx.appcompat.app.AppCompatActivity;"
  
-8. Ve složce "res" vytvoříme složku ("Android Resource Directory") "menu", a vytvoříme "New->Menu Resource         File" a  pojmenujeme ho "main_menu"
-   Pomocí zobrazení "Design" přidáme "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako název položky v menu. V našem případě nastavíme na "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy zobrazena app:showAsAction="always".
+8. Ve složce "res" vytvoříme složku ("Android Resource Directory") "menu", a vytvoříme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
+   Pomocí zobrazení "Design" přidáme "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako název položky v menu. V našem případě nastavíme na      "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy zobrazena app:showAsAction="always".
    
     Zobrazeni menu pomocí kódu: 
     `public boolean onCreateOptionsMenu(Menu menu){` \
