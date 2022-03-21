@@ -351,27 +351,53 @@ Druhá část vypísu dat, která je ve třídě ReceptAdapter:
     Třídá vypadá nějak takto:
 ```  
 
+    public class Activity extends AppCompatActivity {
+    String Nazev, Suroviny, Postup; // vytvoříme textové proměnné
+    TextView textNazev,textSuroviny, textPostup; // vytvoříme si objekty TextView
+    DatabaseReference reff; // umožnuje vám konkrétní umístění ve vaší databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity); // zde si zobrazujete aktivitu, kterou chcete zobrazit
+        Intent ht2= getIntent();
+        Bundle b = ht2.getExtras();
+        Nazev = (String) b.get("nazev");
+        textNazev = findViewById(R.id.textNazev);
+        TextSuroviny = findViewById(R.id.textSuroviny);
+        textPostup = findViewById(R.id.textPostup);
+        textNazev.setText(Nazev);
+        reff = FirebaseDatabase.getInstance().getReference().child("Recept").child(Nazev);
+        reff.addValueEventListener(new ValueEventListener() {
+           
+           // Tento kód zkontroluje zda existují data , pak načte data v nejhorším případě , pokud se stane něco jiného, zachytí tuto chybu a nezpůsobí pád aplikace
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot){
+                try {
+                    if(dataSnapshot.exists())
+                {
+                        Postup  = dataSnapshot.child("postup").getValue().toString();
+                        Suroviny= dataSnapshot.child("suroviny").getValue().toString();
+                        textNazev.setText(Nazev);
+                        textSuroviny.setText(Suroviny);
+                        textPostup.setText(Postup);
+                    }
+                }
+                catch (NullPointerException e){
+                    e.printStackTrace();
+                }
+            }
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError){
+            }
+        });
+    }
+       public void rozklikEdit(View view) // metoda, která nás přesune na stránku edit po kliknutí
+    {
+        Intent ht2 = new Intent(Activity.this, EditActivity.class);
+        ht2.putExtra("nazev2", Nazev);
+        startActivity(ht2);
+    }
 
 
 ``` 
