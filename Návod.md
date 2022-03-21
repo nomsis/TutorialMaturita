@@ -144,11 +144,10 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
     postup = findViewById(R.id.editReceptProcess); // do nazev ukládáte položku z vašeho layoutu pomocí id.
     }
     
-    ``` 
-    Tohle je funkce, které mi zapisuje data do databáze:
-    ``` 
+     
+   // Tohle je funkce, které mi zapisuje data do databáze:    
     
-    public void zapisData(View view) {
+      public void zapisData(View view) {
            
  nazev = (EditText) findViewById(R.id.editReceptName); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id
  suroviny = (EditText) findViewById(R.id.editReceptResources); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id
@@ -256,11 +255,11 @@ Druhá část vypísu dat, která je ve třídě ReceptAdapter:
         }
    }
     
-    ``` 
+``` 
 12. Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat.   
    
-   ```
+```
    public class EditActivity extends AppCompatActivity {
     
     String Nazev, Suroviny, Postup, nazev2; // vytvoříme textové proměnné
