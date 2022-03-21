@@ -148,20 +148,20 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
       
     public void zapisData(View view) {
            
-        nazev = (EditText) findViewById(R.id.editReceptName); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id
-        suroviny = (EditText) findViewById(R.id.editReceptResources); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id
-        postup = (EditText) findViewById(R.id.editReceptProcess); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id.
-        recept = new Recept(); // Zde si vytvoříme novou instanci třídy Recept.
-        reff = FirebaseDatabase.getInstance().getReference("Recept"); // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"
-        recept.setNazev(nazev.getText().toString().trim()); //uloží nám do proměnné Nazev ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
+ nazev = (EditText) findViewById(R.id.editReceptName); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id
+ suroviny = (EditText) findViewById(R.id.editReceptResources); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id
+ postup = (EditText) findViewById(R.id.editReceptProcess); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id.
+ recept = new Recept(); // Zde si vytvoříme novou instanci třídy Recept.
+ reff = FirebaseDatabase.getInstance().getReference("Recept"); // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"
+ recept.setNazev(nazev.getText().toString().trim()); //uloží nám do proměnné Nazev ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
  recept.setSuroviny(suroviny.getText().toString().trim()); //uloží nám do proměnné Suroviny ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
  recept.setPostup(postup.getText().toString().trim()); // uloží nám do proměnné Postup ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
-        reff.child(nazev.getText().toString().trim()).setValue(recept); // vytvoří podsložku ve složce recept a nastaví hodnoty z předchozích řádků kódu.
-        Toast.makeText(AddRecept.this, "Zapisuji data.", Toast.LENGTH_SHORT).show(); // Vypíše vám hlášku, že "Zapisuji data"
-        Intent ht1 = new Intent(AddRecept.this, MainActivity.class); // popisujeme operaci, která se má provést
-        startActivity(ht1); // startuje tu danou operaci
-        }
-        }
+ reff.child(nazev.getText().toString().trim()).setValue(recept); // vytvoří podsložku ve složce recept a nastaví hodnoty z předchozích řádků kódu.
+ Toast.makeText(AddRecept.this, "Zapisuji data.", Toast.LENGTH_SHORT).show(); // Vypíše vám hlášku, že "Zapisuji data"
+ Intent ht1 = new Intent(AddRecept.this, MainActivity.class); // popisujeme operaci, která se má provést
+ startActivity(ht1); // startuje tu danou operaci
+  }
+  }
 ``` 
 11. Výpis dat z databáze
     
