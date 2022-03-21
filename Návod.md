@@ -156,6 +156,18 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
  nazev = (EditText) findViewById(R.id.editReceptName); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id
  suroviny = (EditText) findViewById(R.id.editReceptResources); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id
  postup = (EditText) findViewById(R.id.editReceptProcess); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id.
+ 
+  // Podmínka, pokud nenapíšete nic do textového pole při přidávání tak vám to nepřidá, musí být zde hodnota
+  if (TextUtils.isEmpty(nazev.getText().toString())) {
+            Toast.makeText(this, "Zadej název", Toast.LENGTH_SHORT).show();
+            return;
+        } else if (TextUtils.isEmpty(suroviny.getText().toString())) {
+            Toast.makeText(this, "Zadej Suroviny", Toast.LENGTH_SHORT).show();
+            return;
+        } else if (TextUtils.isEmpty(postup.getText().toString())) {
+            Toast.makeText(this, "Zadej Postup", Toast.LENGTH_SHORT).show();
+            return;
+        }else{
  recept = new Recept(); // Zde si vytvoříme novou instanci třídy Recept.
  reff = FirebaseDatabase.getInstance().getReference("Recept"); // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"
  recept.setNazev(nazev.getText().toString().trim()); //uloží nám do proměnné Nazev ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
