@@ -33,7 +33,7 @@ Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použit
     `".read": true,`\
     `".write": true`\
      `}`\
-   ` }`\
+   ` }`
    
 a kliknete na "Publish".
 Tutoriál na propojení vašeho projektu s FIREBASE:
