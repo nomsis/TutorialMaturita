@@ -41,7 +41,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 6.  Nastavení manifestu
 
-    Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu `("manifests->AndroidManifest.xml").` Definujeme to pomocí     `<activity android:name=".AddRecept"/>` `.AddRecept - je název třídy.` 
+    Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu `("manifests->AndroidManifest.xml").` 
+    Definujeme to pomocí `<activity android:name=".AddRecept"/>` `.AddRecept - je název třídy.` 
 
 7.  Extends AppCompatActivity
   
