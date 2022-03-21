@@ -213,9 +213,9 @@ Třída MainActivity se bude skládat z:
         super.onStop();
         adapter.stopListening();
     }
-                
+  ```               
 Druhá část vypísu dat, která je ve třídě ReceptAdapter: 
-  
+  ``` 
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
    public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) { super(options);} // Konstruktor vašeho Adapteru      
