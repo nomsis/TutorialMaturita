@@ -215,11 +215,9 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {`\  
    `View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);`\       
        `return new ReceptAdapter.receptViewholder(view);`\
-    `}`\
-    
+    `}`\    
     `class receptViewholder extends RecyclerView.ViewHolder   {`\
-        `TextView nazev, suroviny, postup;`\
-        
+        `TextView nazev, suroviny, postup;`\       
         `public receptViewholder(@NonNull View itemView)`\
         `{`\
             `super(itemView);`\
