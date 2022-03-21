@@ -213,11 +213,17 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
         super.onStop();
         adapter.stopListening();
     }
+    ```
+    
+    
+    
+    
+    
         
     Druhá část vypísu dat, která je ve třídě ReceptAdapter:
 
    
-   ``` 
+  
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
    public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) { super(options);} // Konstruktor vašeho Adapteru      
