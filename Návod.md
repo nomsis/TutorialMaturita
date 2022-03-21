@@ -278,6 +278,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     Funkce může vypadat nějak takto.
      
      `public void odstranitData(View view){`  
+        
         `recept = new Recept();`  // Zde si vytvoříme novou instanci třídy Recept.\
         `reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept", a kde se daná data mají vymazat.\
         `recept.setNazev(null);` // po kliknutí na tlačítko odstranit, vymaže hodnoty promměných objektu recept\
