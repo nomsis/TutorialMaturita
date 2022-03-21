@@ -227,15 +227,14 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    `}`
     
 12. Třída EditActivity   
-   V této třídě jsou funkce na editování a mazání dat.
-   
+   V této třídě jsou funkce na editování a mazání dat.   
    `public class EditActivity extends AppCompatActivity {`
     
     `String Nazev, Suroviny, Postup, nazev2;` // vytvoříme textové proměnné\
     `EditText textNazev, textSuroviny, textPostup;`  // políčka, kde se píšou dané texty.\
     `EditText editTextZapsat;` // zapíše se daná hodnota\
     `Button btnZapsat;` // Zde si definujete id vašeho vytvořeného Buttonu\
-    `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.\
+    `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění         databáze.\
     `Recept recept;` // Zde si definujete vaši třídu Recept  
 
     `@Override`\
