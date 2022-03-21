@@ -6,6 +6,7 @@
     Android studio si můžete stáhnout zde: https://developer.android.com/studio 
 
 3. Výběr databáze
+
     Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. 
     Budete si muset vytvořit účet zde, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE:
     https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
