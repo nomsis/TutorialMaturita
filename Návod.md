@@ -121,8 +121,7 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
         Postup = postup; // z parametru, který nastavíme to uloží do proměnné.
     }
    }
-``` 
-
+ 
 10. Ukládání dat do vaší databáze
       
       Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze.
@@ -163,61 +162,59 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
         startActivity(ht1); // startuje tu danou operaci
         }
         }
-```
+``` 
 11. Výpis dat z databáze
     
     Výpis se bude skládat ze dvou částí první část bude ve třídě MainActivity a druhá část se bude skládat ze třídy ReceptAdapter. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat
     
     Třída MainActivity se bude skládat z:
 
-   
-   `EditText nazev, suroviny, postup;` // Zde si definujete vaše layout stránky\
-    `RecyclerView recyclerView;` // Zde si definujete pojmenování vašeho recyclerView\
-    `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší \
-    databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.\
-    `ReceptAdapter adapter;` // Zde si definujete pojmenování vašeho adapteru
+   ``` 
+   EditText nazev, suroviny, postup; // Zde si definujete vaše layout stránky
+   RecyclerView recyclerView; // Zde si definujete pojmenování vašeho recyclerView
+   DatabaseReference reff; //DatabaseReference vám umožnuje konkrétní umístění ve vašídatabázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.
+   ReceptAdapter adapter; // Zde si definujete pojmenování vašeho adapteru
+            
+    @Override // upozorní, že se přepisuje metoda mateřské třídy   
     
-    
-    
-    `@Override` // upozorní, že se přepisuje metoda mateřské třídy\    
-    
-    `protected void onCreate(Bundle savedInstanceState) {`\
-        `super.onCreate(savedInstanceState);`\
-        `setContentView(R.layout.recepts);` // nastavíme si layout stránku, kterou chcete zobrazit\
-        `reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"\
-        `recyclerView = findViewById(R.id.recyclerRecepts);` // uložíte si recyclerView, který budete používat
-        //Slouží k zobrazení vašich přidaných dat do databáze a nastavujete ho na lineární zobrazení\
-        `recyclerView.setLayoutManager(`\
-                `new LinearLayoutManager(this));`
-       
-       //Když jsou data přidána, odebrána nebo změněna, tyto aktualizace se automaticky aplikují na vaše                  uživatelské rozhraní v reálném čase.\
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.recepts); // nastavíme si layout stránku, kterou chcete zobrazit
+        reff = FirebaseDatabase.getInstance().getReference("Recept"); // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"
+        recyclerView = findViewById(R.id.recyclerRecepts); // uložíte si recyclerView, který budete používat
         
-        `FirebaseRecyclerOptions<Recept> options1`\
-                `= new FirebaseRecyclerOptions.Builder<Recept>()`\
-                `.setQuery(reff, Recept.class)`\
-                `.build();`\
-        `adapter = new ReceptAdapter(options1);` // Vytvoříme instanci třídy ReceptAdapter\
-        `recyclerView.setAdapter(adapter);`  \
-        `nazev =  findViewById(R.id.editReceptName);` // do nazev ukládáte položku z vašeho layoutu pomocí id.\
-        `suroviny = findViewById(R.id.editReceptResources);` // do suroviny ukládáte položku z vašeho layoutu pomocí id.\
-        `postup =  findViewById(R.id.editReceptProcess);` // do postup ukládáte položku z vašeho layoutu pomocí id.\
-        `}`
+        //Slouží k zobrazení vašich přidaných dat do databáze a nastavujete ho na lineární zobrazení
+        recyclerView.setLayoutManager(
+                new LinearLayoutManager(this));
+       
+       //Když jsou data přidána, odebrána nebo změněna, tyto aktualizace se automaticky aplikují na vaše uživatelské rozhraní v reálném čase.
+        
+        FirebaseRecyclerOptions<Recept> options1
+                = new FirebaseRecyclerOptions.Builder<Recept>()
+                .setQuery(reff, Recept.class)
+                .build();
+        adapter = new ReceptAdapter(options1); // Vytvoříme instanci třídy ReceptAdapter
+        recyclerView.setAdapter(adapter);
+        nazev =  findViewById(R.id.editReceptName); // do nazev ukládáte položku z vašeho layoutu pomocí id.
+        suroviny = findViewById(R.id.editReceptResources); // do suroviny ukládáte položku z vašeho layoutu pomocí id.
+        postup =  findViewById(R.id.editReceptProcess); // do postup ukládáte položku z vašeho layoutu pomocí id.
+        }
     
-    //Zde si spouštítě váš adaptér \
-     `@Override`\    
-    `protected void onStart() {`\
-        `super.onStart();`\
-        `adapter.startListening();`\
-    `}`\
+    //Zde si spouštítě váš adaptér 
+     @Override    
+    protected void onStart() {
+        super.onStart();
+        adapter.startListening();
+    }
    
-   //Zde stopujete váš adaptér\
-    `@Override`\    
-    `protected void onStop() {`\
-        `super.onStop();`\
-        `adapter.stopListening();`\
-    `}`
+   //Zde stopujete váš adaptér
+    @Override    
+    protected void onStop() {
+        super.onStop();
+        adapter.stopListening();
+    }
     
-    Druhá část vypísu dat, která je ve třídě `ReceptAdapter:`\
+    Druhá část vypísu dat, která je ve třídě ReceptAdapter:
    
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
