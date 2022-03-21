@@ -81,7 +81,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
     `String Nazev;` // Vytvoříme si proměnu String s název "Nazev" což je vlastně textová proměná \
     `String Suroviny;` // Vytvoříme si proměnu String s název "Suroviny" což je vlastně textová proměná \
-    `String Postup;` // Vytvoříme si proměnu String s název "Postup" což je vlastně textová proměná \
+    `String Postup;` // Vytvoříme si proměnu String s název "Postup" což je vlastně textová proměná 
     
     `public Recept()` // vytvoříme si konstruktor Recept \
     `{` \
