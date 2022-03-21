@@ -28,6 +28,7 @@ Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použit
     `}`\
    ` }`\
     změníte na: 
+    
     `{`\
     `"rules": {`\
     `".read": true,`\
