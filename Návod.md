@@ -161,8 +161,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.\
     `ReceptAdapter adapter;` // Zde si definujete pojmenování vašeho adapteru
     
-    `@Override` // upozorní, že se přepisuje metoda mateřské třídy\
     
+    `@Override` // upozorní, že se přepisuje metoda mateřské třídy\    
     `protected void onCreate(Bundle savedInstanceState) {`\
         `super.onCreate(savedInstanceState);`\
         `setContentView(R.layout.recepts);` // nastavíme si layout stránku, kterou chcete zobrazit\
@@ -186,15 +186,14 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         `}`
     
     //Zde si spouštítě váš adaptér \
-     `@Override`\
-    
+     `@Override`\    
     `protected void onStart() {`\
         `super.onStart();`\
         `adapter.startListening();`\
     `}`\
-    //Zde stopujete váš adaptér\
-    `@Override`\
-    
+   
+   //Zde stopujete váš adaptér\
+    `@Override`\    
     `protected void onStop() {`\
         `super.onStop();`\
         `adapter.stopListening();`\
