@@ -216,47 +216,45 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
         
     Druhá část vypísu dat, která je ve třídě ReceptAdapter:
 
+   
    ``` 
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
-   public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) { // Konstruktor vašeho Adapteru   
+   public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) { super(options);} // Konstruktor vašeho Adapteru      
     
-    `super(options);`\
-    `}`\
-    //nastavuje některá soukromá pole, která má RecyclerView používat.\
-    `@Override`\
-    
-    `protected void onBindViewHolder(@NonNull receptViewholder holder,int position, Recept model) {`\
+    //nastavuje některá soukromá pole, která má RecyclerView používat.   
+    @Override   
+    protected void onBindViewHolder(@NonNull receptViewholder holder,int position, Recept model) {
        
-       `holder.nazev.setText(model.getNazev());`\
-    `}`\
-    //Slouží k vytvoření nového RecyclerView.ViewHoldera inicializuje některá soukromá pole, která má RecyclerView použít.\    
+       holder.nazev.setText(model.getNazev());
+    }
+    //Slouží k vytvoření nového RecyclerView.ViewHoldera inicializuje některá soukromá pole, která má RecyclerView použít.    
     
-    `public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {`\  
+    public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {  
    
-   `View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);`\       
-       `return new ReceptAdapter.receptViewholder(view);`\
-    `}`\     
+   View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);      
+       `return new ReceptAdapter.receptViewholder(view);
+    }    
     
-    `class receptViewholder extends RecyclerView.ViewHolder   {`\
-        `TextView nazev, suroviny, postup;`\              
+    class receptViewholder extends RecyclerView.ViewHolder   {
+        TextView nazev, suroviny, postup;            
        
-       `public receptViewholder(@NonNull View itemView)`\
-        `{`\
-            `super(itemView);`\
-            `nazev= itemView.findViewById(R.id.Nazev);`\
-            `itemView.findViewById(R.id.btnRozklik).setOnClickListener(new View.OnClickListener() {`\
-                `@Override`\
+       public receptViewholder(@NonNull View itemView)
+        {
+            super(itemView);
+            nazev= itemView.findViewById(R.id.Nazev);
+            itemView.findViewById(R.id.btnRozklik).setOnClickListener(new View.OnClickListener() {
                 
-                `public void onClick(View view) {`\
-                    `Intent ht1 = new Intent( view.getContext(), Activity.class);`\
-                    `ht1.putExtra("nazev", nazev.getText());`\
-                    `view.getContext().startActivity(ht1);`\
-                    `FirebaseDatabase.getInstance().getReference().child("Recept");`\
-                `}`\
-            `});`\
-        `}`\
-   `}`
+                @Override                
+                public void onClick(View view) {
+                    Intent ht1 = new Intent( view.getContext(), Activity.class);
+                    ht1.putExtra("nazev", nazev.getText());
+                    view.getContext().startActivity(ht1);
+                    FirebaseDatabase.getInstance().getReference().child("Recept");
+                }
+            });
+        }
+   }
     
 12. Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat.   
