@@ -228,7 +228,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
 12. Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat.
-    `public class EditActivity extends AppCompatActivity {`
+   
+   `public class EditActivity extends AppCompatActivity {`
     
     `String Nazev, Suroviny, Postup, nazev2;` // vytvoříme textové proměnné\
     `EditText textNazev, textSuroviny, textPostup;`  // políčka, kde se píšou dané texty.\
