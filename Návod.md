@@ -70,7 +70,7 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
     return true;} 
     
     Nastavení položek v menu:
-    ```
+   
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
     
     switch (item.getItemId()) {
