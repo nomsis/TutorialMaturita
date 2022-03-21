@@ -158,6 +158,7 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
  postup = (EditText) findViewById(R.id.editReceptProcess); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id.
  
   // Podmínka, pokud nenapíšete nic do textového pole při přidávání tak vám to nepřidá, musí být zde hodnota
+  
   if (TextUtils.isEmpty(nazev.getText().toString())) {
             Toast.makeText(this, "Zadej název", Toast.LENGTH_SHORT).show();
             return;
