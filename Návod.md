@@ -218,13 +218,14 @@ https://www.youtube.com/watch?v=nep85PD8U7M
        `return new ReceptAdapter.receptViewholder(view);`\
     `}`\     
     `class receptViewholder extends RecyclerView.ViewHolder   {`\
-        `TextView nazev, suroviny, postup;`\       
-        `public receptViewholder(@NonNull View itemView)`\
+        `TextView nazev, suroviny, postup;`\              
+       `public receptViewholder(@NonNull View itemView)`\
         `{`\
             `super(itemView);`\
             `nazev= itemView.findViewById(R.id.Nazev);`\
             `itemView.findViewById(R.id.btnRozklik).setOnClickListener(new View.OnClickListener() {`\
                 `@Override`\
+                
                 `public void onClick(View view) {`\
                     `Intent ht1 = new Intent( view.getContext(), Activity.class);`\
                     `ht1.putExtra("nazev", nazev.getText());`\
