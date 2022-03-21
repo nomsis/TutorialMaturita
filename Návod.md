@@ -58,6 +58,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     Zobrazeni menu pomocí kódu: 
     
     `public boolean onCreateOptionsMenu(Menu menu){` \
+    
     `MenuInflater inflater = getMenuInflater();` \
     `inflater.inflate(R.menu.main_menu, menu);` // main_menu" je název našeho menu \
     `return true;}` \
@@ -66,6 +67,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     Nastavení položek v menu:
     
     `public boolean onOptionsItemSelected(@NonNull MenuItem item) {` \
+    
     `switch (item.getItemId()) {`\
     `case R.id.home:` //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu \
    ` Intent ht1 = new Intent(ReceptActivity.this, MainActivity.class);` \
@@ -120,6 +122,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
       Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
     
      `public class AddRecept extends AppCompatActivity {`\
+        
         `EditText nazev, suroviny, postup;` // Zde si definujete vaše layout stránky\
         `Recept recept;` // Zde si definujete vaši třídu Recept \
         `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší 
@@ -132,7 +135,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         `postup = findViewById(R.id.editReceptProcess);` // do nazev ukládáte položku z vašeho layoutu pomocí id.\
     `}`\
         Tohle je funkce, které mi zapisuje data do databáze:
-        `public void zapisData(View view) {` \
+      
+      `public void zapisData(View view) {` \
             `nazev = (EditText) findViewById(R.id.editReceptName);` // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id\
             `suroviny = (EditText) findViewById(R.id.editReceptResources);` // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id\
             `postup = (EditText) findViewById(R.id.editReceptProcess);` // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id.\
@@ -160,6 +164,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `ReceptAdapter adapter;` // Zde si definujete pojmenování vašeho adapteru
     
     `@Override` // upozorní, že se přepisuje metoda mateřské třídy\
+    
     `protected void onCreate(Bundle savedInstanceState) {`\
         `super.onCreate(savedInstanceState);`\
         `setContentView(R.layout.recepts);` // nastavíme si layout stránku, kterou chcete zobrazit\
@@ -182,12 +187,14 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         `}`
     //Zde si spouštítě váš adaptér \
      `@Override`\
+    
     `protected void onStart() {`\
         `super.onStart();`\
         `adapter.startListening();`\
     `}`\
     //Zde stopujete váš adaptér\
     `@Override`\
+    
     `protected void onStop() {`\
         `super.onStop();`\
         `adapter.stopListening();`\
@@ -207,9 +214,11 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     //Slouží k vytvoření nového RecyclerView.ViewHoldera inicializuje některá soukromá pole, která má RecyclerView použít.\
     
     `public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {`\
+   
    `View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);`\
         `return new ReceptAdapter.receptViewholder(view);`\
     `}`\
+    
     `class receptViewholder extends RecyclerView.ViewHolder   {`\
         `TextView nazev, suroviny, postup;`\
         
