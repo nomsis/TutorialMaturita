@@ -56,6 +56,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    Pomocí zobrazení "Design" přidáme "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako název položky v menu. V našem případě nastavíme na      "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy zobrazena app:showAsAction="always".
    
     Zobrazeni menu pomocí kódu: 
+    
     `public boolean onCreateOptionsMenu(Menu menu){` \
     `MenuInflater inflater = getMenuInflater();` \
     `inflater.inflate(R.menu.main_menu, menu);` // main_menu" je název našeho menu \
