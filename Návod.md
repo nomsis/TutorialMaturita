@@ -105,22 +105,23 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
    public void setNazev(String nazev) { // pro nastavení hodnoty Nazev
         Nazev = nazev; // z parametru, který nastavíme to uloží do proměnné.
     }   
-   `public String getSuroviny() {` // pro získání hodnoty Suroviny\
-        `return Suroviny;` // vrací hodnotu Suroviny\
-    `}`
+   public String getSuroviny() { // pro získání hodnoty Suroviny
+        return Suroviny; // vrací hodnotu Suroviny
+    }
 
-    `public void setSuroviny(String suroviny) {` // pro nastavení hodnoty Suroviny\
-        `Suroviny = suroviny;` // z parametru, který nastavíme to uloží do proměnné.\
-    `}`
+    public void setSuroviny(String suroviny) { // pro nastavení hodnoty Suroviny
+        Suroviny = suroviny; // z parametru, který nastavíme to uloží do proměnné.
+    }
 
-    `public String getPostup() {` // pro získání hodnoty Postup\
-        `return Postup;` // vrací hodnotu Postup\
-    `}`
+    public String getPostup() { // pro získání hodnoty Postup
+        return Postup; // vrací hodnotu Postup
+    }
 
-    `public void setPostup(String postup) {` // pro nastavení hodnoty Postup\
-        `Postup = postup;` // z parametru, který nastavíme to uloží do proměnné.\
-    `}`\
-   `}`
+    public void setPostup(String postup) { // pro nastavení hodnoty Postup
+        Postup = postup; // z parametru, který nastavíme to uloží do proměnné.
+    }
+   }
+
 10. Ukládání dat do vaší databáze
       
       Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze.
