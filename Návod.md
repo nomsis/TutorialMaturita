@@ -144,8 +144,10 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
     postup = findViewById(R.id.editReceptProcess); // do nazev ukládáte položku z vašeho layoutu pomocí id.
     }
     
+    ``` 
     Tohle je funkce, které mi zapisuje data do databáze:
-      
+    ``` 
+    
     public void zapisData(View view) {
            
  nazev = (EditText) findViewById(R.id.editReceptName); // Zde si určujete, že výsledek bude v EditTextu a hledatého pomocí layout id
