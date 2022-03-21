@@ -155,11 +155,13 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
     Třída MainActivity se bude skládat z:
 
-    `EditText nazev, suroviny, postup;` // Zde si definujete vaše layout stránky\
+   
+   `EditText nazev, suroviny, postup;` // Zde si definujete vaše layout stránky\
     `RecyclerView recyclerView;` // Zde si definujete pojmenování vašeho recyclerView\
     `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší \
     databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.\
     `ReceptAdapter adapter;` // Zde si definujete pojmenování vašeho adapteru
+    
     
     
     `@Override` // upozorní, že se přepisuje metoda mateřské třídy\    
