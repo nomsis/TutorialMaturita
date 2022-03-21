@@ -68,6 +68,7 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
     MenuInflater inflater = getMenuInflater();
     inflater.inflate(R.menu.main_menu, menu); // main_menu" je název našeho menu 
     return true;} 
+    zobrazíme menu, kód voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"` 
     
     Nastavení položek v menu:
    
