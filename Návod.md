@@ -213,7 +213,7 @@ Třída MainActivity se bude skládat z:
         super.onStop();
         adapter.stopListening();
     }
-        ```        
+                
 Druhá část vypísu dat, která je ve třídě ReceptAdapter: 
   
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
@@ -253,7 +253,7 @@ Druhá část vypísu dat, která je ve třídě ReceptAdapter:
             });
         }
    }
-    ```
+    
     
 12. Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat.   
