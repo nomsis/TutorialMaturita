@@ -202,13 +202,15 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    
    
    `public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) {` // Konstruktor vašeho Adapteru\    
+    
     `super(options);`\
     `}`\
     //nastavuje některá soukromá pole, která má RecyclerView používat.\
     `@Override`\
     
     `protected void onBindViewHolder(@NonNull receptViewholder holder,int position, Recept model) {`\
-        `holder.nazev.setText(model.getNazev());`\
+       
+       `holder.nazev.setText(model.getNazev());`\
     `}`\
     //Slouží k vytvoření nového RecyclerView.ViewHoldera inicializuje některá soukromá pole, která má RecyclerView použít.\    
     
