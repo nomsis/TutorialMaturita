@@ -272,6 +272,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
             `}`\
        `});`\
     `}`
+    
 13. Mazání dat   
     V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu EditActivity v které mám funkce na mazání a upravování dat. 
     Funkce může vypadat nějak takto:
