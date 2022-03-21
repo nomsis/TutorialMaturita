@@ -345,6 +345,7 @@ Druhá část vypísu dat, která je ve třídě ReceptAdapter:
 
 ```  
 15. Třída Activity
+    
     Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozlik mám samostatnou funkci
 
     Třídá vypadá nějak takto:
