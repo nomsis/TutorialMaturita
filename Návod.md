@@ -167,9 +167,9 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
     
     Výpis se bude skládat ze dvou částí první část bude ve třídě MainActivity a druhá část se bude skládat ze třídy ReceptAdapter. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat
     
-            Třída MainActivity se bude skládat z:
+Třída MainActivity se bude skládat z:
 
-        ``` 
+ ``` 
    EditText nazev, suroviny, postup; // Zde si definujete vaše layout stránky
    RecyclerView recyclerView; // Zde si definujete pojmenování vašeho recyclerView
    DatabaseReference reff; //DatabaseReference vám umožnuje konkrétní umístění ve vašídatabázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.
@@ -214,7 +214,7 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
         adapter.stopListening();
     }
         ```        
-        Druhá část vypísu dat, která je ve třídě ReceptAdapter: 
+Druhá část vypísu dat, která je ve třídě ReceptAdapter: 
   
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
