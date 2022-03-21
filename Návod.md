@@ -163,6 +163,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
     
     `@Override` // upozorní, že se přepisuje metoda mateřské třídy\    
+    
     `protected void onCreate(Bundle savedInstanceState) {`\
         `super.onCreate(savedInstanceState);`\
         `setContentView(R.layout.recepts);` // nastavíme si layout stránku, kterou chcete zobrazit\
