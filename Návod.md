@@ -121,6 +121,7 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
         Postup = postup; // z parametru, který nastavíme to uloží do proměnné.
     }
    }
+``` 
 
 10. Ukládání dat do vaší databáze
       
