@@ -235,7 +235,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `EditText textNazev, textSuroviny, textPostup;`  // políčka, kde se píšou dané texty.\
     `EditText editTextZapsat;` // zapíše se daná hodnota\
     `Button btnZapsat;` // Zde si definujete id vašeho vytvořeného Buttonu\
-    `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění         databáze.\
+    `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění       databáze.\
     `Recept recept;` // Zde si definujete vaši třídu Recept  
 
     `@Override`\
@@ -275,7 +275,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
 13. Mazání dat   
     V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu EditActivity v které mám funkce na mazání a upravování dat. 
-    Funkce může vypadat nějak takto:
+    Funkce může vypadat nějak takto.
      
      `public void odstranitData(View view){`  
         `recept = new Recept();`  // Zde si vytvoříme novou instanci třídy Recept.\
