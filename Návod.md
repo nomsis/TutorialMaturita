@@ -88,21 +88,23 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
     
     Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. Bude to vypadat takhle:   
     
-    `public class Recept {` 
+    ```
+    public class Recept { 
     
-    `String Nazev;` // Vytvoříme si proměnu String s název "Nazev" což je vlastně textová proměná \
-    `String Suroviny;` // Vytvoříme si proměnu String s název "Suroviny" což je vlastně textová proměná \
-    `String Postup;` // Vytvoříme si proměnu String s název "Postup" což je vlastně textová proměná 
+    String Nazev; // Vytvoříme si proměnu String s název "Nazev" což je vlastně textová proměná 
+    String Suroviny; // Vytvoříme si proměnu String s název "Suroviny" což je vlastně textová proměná 
+    String Postup; // Vytvoříme si proměnu String s název "Postup" což je vlastně textová proměná 
     
-    `public Recept()` // vytvoříme si konstruktor Recept \
-    `{` \
-   `}`    
-    `public String getNazev() {` //pro získání hodnoty Nazev\
-        `return Nazev;` // vrací hodnotu Nazvu\
-    `}`  
-   `public void setNazev(String nazev) {` // pro nastavení hodnoty Nazev\
-        `Nazev = nazev;` // z parametru, který nastavíme to uloží do proměnné.\
-    `}`   
+    public Recept() // vytvoříme si konstruktor Recept 
+    { 
+    }    
+    
+    public String getNazev() { //pro získání hodnoty Nazev
+        return Nazev; // vrací hodnotu Nazvu
+    }  
+   public void setNazev(String nazev) { // pro nastavení hodnoty Nazev
+        Nazev = nazev; // z parametru, který nastavíme to uloží do proměnné.
+    }   
    `public String getSuroviny() {` // pro získání hodnoty Suroviny\
         `return Suroviny;` // vrací hodnotu Suroviny\
     `}`
