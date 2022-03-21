@@ -213,16 +213,8 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
         super.onStop();
         adapter.stopListening();
     }
-    ```
-    
-    
-    
-    
-    
-        
-    Druhá část vypísu dat, která je ve třídě ReceptAdapter:
-
-   
+    ```        
+    Druhá část vypísu dat, která je ve třídě ReceptAdapter: 
   
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
@@ -239,7 +231,7 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
     public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {  
    
    View view= LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);      
-       `return new ReceptAdapter.receptViewholder(view);
+       return new ReceptAdapter.receptViewholder(view);
     }    
     
     class receptViewholder extends RecyclerView.ViewHolder   {
@@ -261,6 +253,7 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
             });
         }
    }
+    ```
     
 12. Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat.   
