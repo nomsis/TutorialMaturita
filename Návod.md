@@ -126,22 +126,22 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
       
       Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze.
       
-      Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
+Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
     
-    ```     
-     public class AddRecept extends AppCompatActivity {
+ ```     
+ public class AddRecept extends AppCompatActivity {
         
-        `EditText nazev, suroviny, postup;` // Zde si definujete vaše layout stránky\
-        `Recept recept;` // Zde si definujete vaši třídu Recept \
-        `DatabaseReference reff;` // DatabaseReference vám umožnuje konkrétní umístění ve vaší 
-        databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.\
-        `protected void onCreate(Bundle savedInstanceState) {`\
-        `super.onCreate(savedInstanceState);`  \
-        `setContentView(R.layout.add_recept);` // Nastavujete jaký vzhled stránky se má načíst. \
-        `nazev = findViewById(R.id.editReceptName);` // do nazev ukládáte položku z vašeho layoutu pomocí id.\
-        `suroviny = findViewById(R.id.editReceptResources);` // do nazev ukládáte položku z vašeho layoutu\ pomocí id.
-        `postup = findViewById(R.id.editReceptProcess);` // do nazev ukládáte položku z vašeho layoutu pomocí id.\
-    `}`\
+    EditText nazev, suroviny, postup; // Zde si definujete vaše layout stránky\
+    Recept recept; // Zde si definujete vaši třídu Recept \
+    DatabaseReference reff; // umožnuje vám konkrétní umístění ve vaší databázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze   
+    
+    protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);  \
+    setContentView(R.layout.add_recept); // Nastavujete jaký vzhled stránky se má načíst.
+    nazev = findViewById(R.id.editReceptName); // do nazev ukládáte položku z vašeho layoutu pomocí id.
+    suroviny = findViewById(R.id.editReceptResources); // do nazev ukládáte položku z vašeho layoutu\ pomocí id.
+    postup = findViewById(R.id.editReceptProcess); // do nazev ukládáte položku z vašeho layoutu pomocí id.
+    }
         Tohle je funkce, které mi zapisuje data do databáze:
       
       `public void zapisData(View view) {` \
