@@ -154,8 +154,8 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
         recept = new Recept(); // Zde si vytvoříme novou instanci třídy Recept.
         reff = FirebaseDatabase.getInstance().getReference("Recept"); // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"
         recept.setNazev(nazev.getText().toString().trim()); //uloží nám do proměnné Nazev ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
-        recept.setSuroviny(suroviny.getText().toString().trim()); //uloží nám do proměnné Suroviny ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
-        recept.setPostup(postup.getText().toString().trim()); // uloží nám do proměnné Postup ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
+ recept.setSuroviny(suroviny.getText().toString().trim()); //uloží nám do proměnné Suroviny ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
+ recept.setPostup(postup.getText().toString().trim()); // uloží nám do proměnné Postup ve třídě recept obsah v závorce.(v našem případě to co napíšeme do políčka)
         reff.child(nazev.getText().toString().trim()).setValue(recept); // vytvoří podsložku ve složce recept a nastaví hodnoty z předchozích řádků kódu.
         Toast.makeText(AddRecept.this, "Zapisuji data.", Toast.LENGTH_SHORT).show(); // Vypíše vám hlášku, že "Zapisuji data"
         Intent ht1 = new Intent(AddRecept.this, MainActivity.class); // popisujeme operaci, která se má provést
@@ -254,7 +254,7 @@ Druhá část vypísu dat, která je ve třídě ReceptAdapter:
         }
    }
     
-    
+    ``` 
 12. Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat.   
    
