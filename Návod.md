@@ -48,7 +48,8 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
 
     Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu 
     ```("manifests->AndroidManifest.xml").
-    Definujeme to pomocí ```<activity android:name=".AddRecept"/> ".AddRecept - je název třídy." 
+    Definujeme to pomocí 
+    ```<activity android:name=".AddRecept"/> ".AddRecept - je název třídy." 
 
 7.  Extends AppCompatActivity
   
