@@ -74,7 +74,7 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
     
     `switch (item.getItemId()) {`\
     `case R.id.home:` //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu \
-   ` Intent ht1 = new Intent(ReceptActivity.this, MainActivity.class);` \
+   ` Intent ht1 = new Intent(Activity.this, MainActivity.class);` \
     `startActivity(ht1);` \
     `return true;` \
     `default:return super.onOptionsItemSelected(item); } }` \
