@@ -232,7 +232,7 @@ Třída MainActivity se bude skládat z:
         adapter.stopListening();
     }
   ```               
-Druhá část vypísu dat, která je ve třídě ReceptAdapter: 
+Druhá část výpisu dat, která je ve třídě ReceptAdapter: 
   ``` 
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
