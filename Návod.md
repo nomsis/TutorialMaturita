@@ -68,7 +68,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `import androidx.appcompat.app.AppCompatActivity;`
  
 
-11. Třída Recept
+10. Třída Recept
     
     Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. Bude to vypadat takhle:   
     
@@ -107,7 +107,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    }
  
 
-12. Ukládání dat do vaší databáze
+11. Ukládání dat do vaší databáze
       
       Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
       
@@ -162,7 +162,7 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
   }
   }
 ``` 
-13. Výpis dat z databáze
+12. Výpis dat z databáze
     
     Výpis se bude skládat ze dvou částí první část bude ve třídě MainActivity a druhá část se bude skládat ze třídy ReceptAdapter. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
     
@@ -262,7 +262,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
    }
     
 ``` 
-14. Třída EditActivity   
+13. Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.   
    
 ```
@@ -312,7 +312,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
        });
     }
 ```    
-15. Mazání dat   
+14. Mazání dat   
     V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu EditActivity v které mám funkce na mazání a upravování dat. 
     Funkce může vypadat nějak takto.
 ```      
@@ -328,7 +328,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
   startActivity(ht1); // startuje tu danou operaci
     }
 ``` 
-16. Úprava dat    
+15. Úprava dat    
     V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i smazání dat mám v jedné tříde EditActivity.     
 ```   
    
@@ -350,7 +350,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
 
 
 ```  
-17. Třída Activity
+16. Třída Activity
     
     Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozlik mám samostatnou funkci a      také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
 
@@ -406,7 +406,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
     }
 
 ```
-10. Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do složky, kterou jsme vytvořili, uděláme layout, který vytvoříme kliknutím na       naši složku a dáme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
+17. Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do složky, kterou jsme vytvořili, uděláme layout, který vytvoříme kliknutím na       naši složku a dáme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
     Po vytvoření vašeho layoutu, klikneme vpravo nahoře na "Design" a zde přetáhneme zleva "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako     název položky v menu. V našem případě nastavíme na "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy         zobrazena app:showAsAction="always". Zobrazení menu voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"`,                 `"Activity"`, `"EditActivity"` a `"MainActivity"`
    
     Zobrazeni menu pomocí kódu: 
@@ -440,7 +440,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
 
 
 
-Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho Activity.xml
+18. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho Activity
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
@@ -526,7 +526,7 @@ Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layo
 </ScrollView>
 
 ``` 
-Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho add_recept.xml
+19. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho add_recept
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -641,7 +641,7 @@ Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layo
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ``` 
-Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho edit_activity.xml
+20. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho edit_activity
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -768,7 +768,7 @@ Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layo
 
 
 ``` 
-Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho recepts.xml
+21. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho recepts
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -820,7 +820,7 @@ Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layo
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ``` 
-Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho single_view_layout.xml
+22. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho single_view_layout
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
