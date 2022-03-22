@@ -20,8 +20,12 @@
 5. Vytvoření projektu ve FIREBASE
  
     Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte váš název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
+    
+    
+6. Importy ve třídách
+    Pokud napíšete kód a bude vám svítit červeně, stačí najet myší a kliknout na něj a zmáčknou alt + enter a zvolíte Import Class, tak si naimportujete všechny            důležité věci co potřebujete, aby vám projekt správně fungoval.
 
-6. Propojení android studia s vaším vytvořeným projektem ve FIREBASE
+7. Propojení android studia s vaším vytvořeným projektem ve FIREBASE
 
     V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na Connect to Firebase zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho.  Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. Pokud se vám neukáže zelená šipka, budete si to muset ručně nahrát. Nahrajeme tak, že si zkopírujeme danný požadavek a vložíme jej do Grandle Script -> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete. Poté půjdete na WEB vašeho projektu a kliknete na "Build" a poté na "Realtime database" a kliknete na Create Database zde si vybere United States, dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko Enable. Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce  Rules a zde budete mít vypsané toto, a budete to muset změnit:
     
@@ -48,20 +52,20 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Activity"
 
-6.  Nastavení manifestu
+8.  Nastavení manifestu
 
     Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu 
     ```
     //Definujeme to pomocí 
     <activity android:name=".AddRecept"/> ".AddRecept - je název třídy." 
 
-7.  Extends AppCompatActivity
+9.  Extends AppCompatActivity
   
     Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost             nastavíme pomocí "extends". "public class MainActivity extends AppCompatActivity"
     a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. Import vypadá takto:
     "import androidx.appcompat.app.AppCompatActivity;"
  
-8. Ve složce "res" vytvoříme složku ("Android Resource Directory") "menu", a vytvoříme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
+10. Ve složce "res" vytvoříme složku ("Android Resource Directory") "menu", a vytvoříme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
    Pomocí zobrazení "Design" přidáme "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako název položky v menu. V našem případě nastavíme na      "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy zobrazena app:showAsAction="always". zobrazíme menu, kód voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"` 
    
     Zobrazeni menu pomocí kódu: 
@@ -88,7 +92,7 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
     nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu `"MainActivity".`
 
 
-9. Třída Recept
+11. Třída Recept
     
     Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. Bude to vypadat takhle:   
     
@@ -126,7 +130,7 @@ Při vytváření projektu v android studiu si vytvoříme projekt s "Empty Acti
     }
    }
  
-10. Ukládání dat do vaší databáze
+12. Ukládání dat do vaší databáze
       
       Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze.
       
@@ -181,7 +185,7 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
   }
   }
 ``` 
-11. Výpis dat z databáze
+13. Výpis dat z databáze
     
     Výpis se bude skládat ze dvou částí první část bude ve třídě MainActivity a druhá část se bude skládat ze třídy ReceptAdapter. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat
     
@@ -273,7 +277,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
    }
     
 ``` 
-12. Třída EditActivity   
+14. Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat.   
    
 ```
@@ -323,7 +327,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
        });
     }
 ```    
-13. Mazání dat   
+15. Mazání dat   
     V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu EditActivity v které mám funkce na mazání a upravování dat. 
     Funkce může vypadat nějak takto.
 ```      
@@ -339,7 +343,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
   startActivity(ht1); // startuje tu danou operaci
     }
 ``` 
-14. Úprava dat    
+16. Úprava dat    
     V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i smazání dat mám v jedné tříde EditActivity.     
 ```   
    
@@ -361,7 +365,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
 
 
 ```  
-15. Třída Activity
+17. Třída Activity
     
     Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozlik mám samostatnou funkci
 
