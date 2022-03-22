@@ -313,8 +313,8 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
     }
 ```    
 14. Mazání dat   
-    V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu EditActivity v které mám funkce na mazání a upravování dat. 
-    Funkce může vypadat nějak takto.
+    V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu `EditActivity` v které mám funkce na mazání a upravování dat. 
+    Funkce vypadá takto a přidáte ji do třídy `EditActivity`.
 ```      
     public void odstranitData(View view){         
   recept = new Recept(); // Zde si vytvoříme novou instanci třídy Recept.
@@ -329,7 +329,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
     }
 ``` 
 15. Úprava dat    
-    V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i smazání dat mám v jedné tříde EditActivity.     
+    V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i mazání dat mám v jedné tříde `EditActivity`, kde danou funkci vložíte.     
 ```   
    
    public void editDat(View view) {        
