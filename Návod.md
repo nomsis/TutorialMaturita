@@ -164,7 +164,7 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
 ``` 
 13. Výpis dat z databáze
     
-    Výpis se bude skládat ze dvou částí první část bude ve třídě MainActivity a druhá část se bude skládat ze třídy ReceptAdapter. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat
+    Výpis se bude skládat ze dvou částí první část bude ve třídě MainActivity a druhá část se bude skládat ze třídy ReceptAdapter. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
     
 Třída MainActivity se bude skládat z:
 
@@ -263,7 +263,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
     
 ``` 
 14. Třída EditActivity   
-   V této třídě jsou funkce na editování a mazání dat.   
+   V této třídě jsou funkce na editování a mazání dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.   
    
 ```
    public class EditActivity extends AppCompatActivity {
@@ -352,7 +352,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
 ```  
 17. Třída Activity
     
-    Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozlik mám samostatnou funkci
+    Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozlik mám samostatnou funkci a      také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
 
     Třídá vypadá nějak takto:
 ```  
