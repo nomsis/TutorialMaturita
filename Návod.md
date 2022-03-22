@@ -525,8 +525,9 @@ Activity.xml
     </LinearLayout>
 </ScrollView>
 
-
+``` 
 add_recept.xml
+``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -639,7 +640,9 @@ add_recept.xml
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
+``` 
 edit_activity.xml
+``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -764,9 +767,9 @@ edit_activity.xml
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-
+``` 
 recepts.xml
-
+``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -816,8 +819,9 @@ recepts.xml
         app:layout_constraintVertical_bias="0.232" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
-
+``` 
 single_view_layout.xml
+``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
     xmlns:android="http://schemas.android.com/apk/res/android"
