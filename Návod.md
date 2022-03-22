@@ -65,32 +65,6 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. Import vypadá takto:
     "import androidx.appcompat.app.AppCompatActivity;"
  
-10. Ve složce "res" vytvoříme složku ("Android Resource Directory") "menu", a vytvoříme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
-   Pomocí zobrazení "Design" přidáme "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako název položky v menu. V našem případě nastavíme na      "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy zobrazena app:showAsAction="always". zobrazíme menu, kód voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"` 
-   
-    Zobrazeni menu pomocí kódu: 
-    
-    ```
-    public boolean onCreateOptionsMenu(Menu menu){
-    
-    MenuInflater inflater = getMenuInflater();
-    inflater.inflate(R.menu.main_menu, menu); // main_menu" je název našeho menu 
-    return true;} 
-    zobrazíme menu, kód voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"` 
-    
-    Nastavení položek v menu:
-   
-    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-    
-    switch (item.getItemId()) {
-    case R.id.home: //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu 
-   Intent ht1 = new Intent(Activity.this, MainActivity.class); 
-    startActivity(ht1);
-    return true; 
-    default:return super.onOptionsItemSelected(item); } }
-    
-    nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu `"MainActivity".`
-
 
 11. Třída Recept
     
@@ -419,6 +393,39 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
         ht2.putExtra("nazev2", Nazev);
         startActivity(ht2);
     }
+
+
+10. Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do složky, kterou jsme vytvořili, uděláme layout, který vytvoříme kliknutím na       naši složku a dáme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
+    Po vytvoření vašeho layoutu, klikneme vpravo nahoře na "Design" a zde přetáhneme zleva "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako     název položky v menu. V našem případě nastavíme na "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy         zobrazena app:showAsAction="always". Zobrazení menu voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"`,                 `"Activity"`, `"EditActivity"` a `"MainActivity"`
+   
+    Zobrazeni menu pomocí kódu: 
+    
+    ```
+    public boolean onCreateOptionsMenu(Menu menu){
+    
+    MenuInflater inflater = getMenuInflater();
+    inflater.inflate(R.menu.main_menu, menu); // main_menu" je název našeho menu 
+    return true;} 
+    
+    Nastavení položek v menu:
+   
+    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
+    
+    switch (item.getItemId()) {
+    case R.id.home: //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu 
+    Intent ht1 = new Intent(Activity.this, MainActivity.class); 
+    startActivity(ht1);
+    return true; 
+    default:return super.onOptionsItemSelected(item); } }
+    
+    nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu z `"Activity".` na `"MainActivity".`
+
+
+
+
+
+
+
 
 
 ``` 
