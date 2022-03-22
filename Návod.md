@@ -221,7 +221,7 @@ Třída `MainActivity` se bude skládat z:
     }
     }
   ```               
-Druhá část výpisu dat, která je ve třídě `ReceptAdapter`: 
+Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvořit a pojmenujete ji `ReceptAdapter` : 
   ``` 
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
