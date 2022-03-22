@@ -59,7 +59,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     //Definujeme to pomocí 
     <activity android:name=".AddRecept"/> ".AddRecept - je název třídy." 
 
-9.  Extends AppCompatActivity
+9.  Extends AppCompatActivity a 
   
     Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost             nastavíme pomocí "extends". "public class MainActivity extends AppCompatActivity"
     a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. Import vypadá takto:
@@ -166,6 +166,7 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
 Třída MainActivity se bude skládat z:
 
  ``` 
+   public class MainActivity extends AppCompatActivity {
    EditText nazev, suroviny, postup; // Zde si definujete vaše layout stránky
    RecyclerView recyclerView; // Zde si definujete pojmenování vašeho recyclerView
    DatabaseReference reff; //DatabaseReference vám umožnuje konkrétní umístění ve vašídatabázi a lze ji použít pro čtení nebo zápis dat do tohoto umístění databáze.
@@ -208,6 +209,13 @@ Třída MainActivity se bude skládat z:
     protected void onStop() {
         super.onStop();
         adapter.stopListening();
+    }
+        public void AddRecept(View view)
+    {
+        Intent AddRecept = new Intent(MainActivity.this, AddRecept.class);
+        startActivity(AddRecept);
+
+    }
     }
   ```               
 Druhá část výpisu dat, která je ve třídě ReceptAdapter: 
