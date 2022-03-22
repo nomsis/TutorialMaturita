@@ -439,8 +439,8 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
 
 
 
-``` 
-Activity.xml
+
+Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho Activity.xml
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
@@ -526,7 +526,7 @@ Activity.xml
 </ScrollView>
 
 ``` 
-add_recept.xml
+Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho add_recept.xml
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -641,7 +641,7 @@ add_recept.xml
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ``` 
-edit_activity.xml
+Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho edit_activity.xml
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -768,7 +768,7 @@ edit_activity.xml
 
 
 ``` 
-recepts.xml
+Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho recepts.xml
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -820,7 +820,7 @@ recepts.xml
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ``` 
-single_view_layout.xml
+Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho single_view_layout.xml
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
