@@ -64,6 +64,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost             nastavíme pomocí "extends". `public class MainActivity extends AppCompatActivity`, `public class Activity extends AppCompatActivity`, `public class AddRecept            extends AppCompatActivity`, `public class EditActivity extends AppCompatActivity`
     a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. 
     Import vypadá takto:
+    
     `import androidx.appcompat.app.AppCompatActivity;`
  
 
