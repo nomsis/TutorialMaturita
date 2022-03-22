@@ -418,7 +418,7 @@ Druhá část výpisu dat, která je ve třídě ReceptAdapter:
     return true; 
     default:return super.onOptionsItemSelected(item); } }
     
-    nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu z `"Activity".` na `"MainActivity".`
+    //nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu z `"Activity".` na `"MainActivity".`
 
 
 
