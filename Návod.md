@@ -2,30 +2,30 @@
 
 * Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu        byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je    můžete upravit a nakonec i smazat. 
 
-2. Výběr programu na aplikace
+# Výběr programu na aplikace
     
      Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku           Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. 
     Android studio si můžete stáhnout zde: https://developer.android.com/studio 
 
-3. Výběr databáze
+# Výběr databáze
     
     Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. Databáze je zdarma, ale doporučuji zkontrolovat po     vytvoření projektu ve Firebase, že vedle názvu máte "Spark plan" což znamená, že nebudete platit žádné poplatky. Ale jsou zde nějaké omezení, které si můžete           přečíst zde: https://firebase.google.com/pricing
     Budete si muset vytvořit účet zde, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE:
     https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
     
-4. Vytvoření projektu v Android Studiu 
+# Vytvoření projektu v Android Studiu 
    
     Vytvoříme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
     
-5. Vytvoření projektu ve FIREBASE
+# Vytvoření projektu ve FIREBASE
  
     Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte váš název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
     
     
-6. Importy ve třídách
+# Importy ve třídách
     Pokud napíšete kód a bude vám svítit červeně, stačí najet myší a kliknout na něj a zmáčknou alt + enter a zvolíte Import Class, tak si naimportujete všechny            důležité věci co potřebujete, aby vám projekt správně fungoval.
 
-7. Propojení android studia s vaším vytvořeným projektem ve FIREBASE
+# Propojení android studia s vaším vytvořeným projektem ve FIREBASE
 
     V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na "Connect to Firebase" zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho. Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. Poté půjdete na WEB vašeho projektu a kliknete na "Build" a poté na "Realtime database" a kliknete na "Create Database" zde si vybere "United States", dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko "Enable". Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce Rules a zde budete mít vypsané toto:
     
@@ -52,14 +52,14 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
  Pokud vám nebude svítit zelená šipka u "Add the Realtime Database to your app", budete si dané importy muset ručně nahrát. Naimportujeme tak, že si zkopírujeme daný    požadavek a vložíme jej do Grandle Scripts-> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete do "dependencies".
 
-8.  Nastavení manifestu
+# Nastavení manifestu
 
     Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu 
     ```
     //Definujeme to pomocí 
     <activity android:name=".AddRecept"/> ".AddRecept - je název třídy." 
 
-9.  Extends AppCompatActivity  
+# Extends AppCompatActivity  
   
     Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost             nastavíme pomocí "extends". `public class MainActivity extends AppCompatActivity`, `public class Activity extends AppCompatActivity`, `public class AddRecept            extends AppCompatActivity`, `public class EditActivity extends AppCompatActivity`
     a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. 
@@ -68,7 +68,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `import androidx.appcompat.app.AppCompatActivity;`
  
 
-10. Třída Recept
+# Třída Recept
     
     Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. Bude to vypadat takhle:   
     
@@ -107,7 +107,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    }
  
 
-11. Ukládání dat do vaší databáze
+# Ukládání dat do vaší databáze
       
       Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
       
@@ -162,7 +162,7 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
   }
   }
 ``` 
-12. Výpis dat z databáze
+# Výpis dat z databáze
     
     Výpis se bude skládat ze dvou částí první část bude ve třídě `MainActivity` a druhá část se bude skládat ze třídy `ReceptAdapter`. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
     
@@ -221,7 +221,7 @@ Třída `MainActivity` se bude skládat z:
     }
     }
   ```               
-Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvořit a pojmenujete ji `ReceptAdapter` : 
+# Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvořit a pojmenujete ji `ReceptAdapter` : 
   ``` 
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
@@ -262,7 +262,7 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
    }
     
 ``` 
-13. Třída EditActivity   
+# Třída EditActivity   
    V této třídě jsou funkce na editování a mazání dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.   
    
 ```
@@ -312,7 +312,7 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
        });
     }
 ```    
-14. Mazání dat   
+# Mazání dat   
     V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu `EditActivity` v které mám funkce na mazání a upravování dat. 
     Funkce vypadá takto a přidáte ji do třídy `EditActivity`.
 ```      
@@ -328,7 +328,7 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
   startActivity(ht1); // startuje tu danou operaci
     }
 ``` 
-15. Úprava dat    
+# Úprava dat    
     V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i mazání dat mám v jedné tříde `EditActivity`, kde danou funkci vložíte.     
 ```   
    
@@ -350,7 +350,7 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
 
 
 ```  
-16. Třída Activity
+# Třída Activity
     
     Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozlik mám samostatnou funkci a      také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
 
@@ -406,7 +406,8 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
     }
 
 ```
-17. Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do složky, kterou jsme vytvořili, uděláme layout, který vytvoříme kliknutím na       naši složku a dáme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
+# Tvorba Menu
+    Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do složky, kterou jsme vytvořili, uděláme layout, který vytvoříme kliknutím na       naši složku a dáme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
     Po vytvoření vašeho layoutu, klikneme vpravo nahoře na "Design" a zde přetáhneme zleva "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako     název položky v menu. V našem případě nastavíme na "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy         zobrazena app:showAsAction="always". Zobrazení menu voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"`,                 `"Activity"`, `"EditActivity"` a `"MainActivity"`
    
     Zobrazeni menu pomocí kódu: 
@@ -440,7 +441,7 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
 
 
 
-18. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho Activity
+# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho Activity
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
@@ -526,7 +527,7 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
 </ScrollView>
 
 ``` 
-19. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho add_recept
+# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho add_recept
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -641,7 +642,7 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ``` 
-20. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho edit_activity
+# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho edit_activity
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -768,7 +769,7 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
 
 
 ``` 
-21. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho recepts
+# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho recepts
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -820,7 +821,7 @@ Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvoř
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ``` 
-22. Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho single_view_layout
+# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho single_view_layout
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
