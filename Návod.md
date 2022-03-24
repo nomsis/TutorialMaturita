@@ -1,4 +1,4 @@
-1. Záčátek
+# Záčátek
 
     * Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu        byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je    můžete upravit a nakonec i smazat. 
 
