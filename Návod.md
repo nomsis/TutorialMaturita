@@ -15,7 +15,14 @@
 # Vytvoření projektu ve FIREBASE 
 * Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte váš název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
     
-    
+# Vytvoření Třídy
+* Každá třída bude sloužit jak aktivita pro zobrazení nějaké stránky nebo pro přídání receptů atd... .
+* Každou třídu si vytvoříme následovně, ve složce kde je i Třída MainActivity ("java->com.example.databaseid"), a na danou složku klikneme pravým a dáme New->Java Class a pojmenujete ji například `AddRecept`.
+
+# Vytvoření Layoutu
+* Budete si muset vytvořit vzhled jednotlivých stránek, v levém panelu přejdeme do "res->layout->activity_main.xml" v pravé horní části si můžete vybrat, jak chcete xml soubor zobrazovat, doporučuji používat zobrazení "Design" pro přidání objektů na stránku pomocí přetahování objektů z části vlevo od levé obrazovky, a potom používat "Split" na následnout úpravu objektů pomocí kódu. Nezapomeňte každý objekt po přidání ukotvit pomocí teček na stranách objektu.
+ 
+ 
 # Importy ve třídách
 * Pokud napíšete kód a bude vám svítit červeně, stačí najet myší a kliknout na něj a zmáčknou alt + enter a zvolíte Import Class, tak si naimportujete všechny        důležité věci co potřebujete, aby vám projekt správně fungoval.
 
