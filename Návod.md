@@ -34,6 +34,8 @@
 # Importy ve třídách
 * Pokud napíšete kód a bude vám svítit červeně, stačí najet myší a kliknout na něj a zmáčknou alt + enter a zvolíte Import Class, tak si naimportujete všechny        důležité věci co potřebujete, aby vám projekt správně fungoval.
 
+![Import](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/importt.png?raw=true)
+
 # Propojení android studia s vaším vytvořeným projektem ve FIREBASE
 * V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na "Connect to Firebase" zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". 
 * Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho. Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. 
