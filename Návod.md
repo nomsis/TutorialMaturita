@@ -9,21 +9,20 @@
 * Budete si muset vytvořit účet zde, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE:
   https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
     
-# Vytvoření projektu v Android Studiu 
-   
- * Vytvoříme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
+# Vytvoření projektu v Android Studiu   
+* Vytvoříme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
     
-# Vytvoření projektu ve FIREBASE
- 
-    Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte váš název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
+# Vytvoření projektu ve FIREBASE 
+* Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte váš název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
     
     
 # Importy ve třídách
-    Pokud napíšete kód a bude vám svítit červeně, stačí najet myší a kliknout na něj a zmáčknou alt + enter a zvolíte Import Class, tak si naimportujete všechny            důležité věci co potřebujete, aby vám projekt správně fungoval.
+* Pokud napíšete kód a bude vám svítit červeně, stačí najet myší a kliknout na něj a zmáčknou alt + enter a zvolíte Import Class, tak si naimportujete všechny        důležité věci co potřebujete, aby vám projekt správně fungoval.
 
 # Propojení android studia s vaším vytvořeným projektem ve FIREBASE
-
-    V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na "Connect to Firebase" zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho. Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. Poté půjdete na WEB vašeho projektu a kliknete na "Build" a poté na "Realtime database" a kliknete na "Create Database" zde si vybere "United States", dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko "Enable". Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce Rules a zde budete mít vypsané toto:
+* V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na "Connect to Firebase" zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". 
+* Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho. Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. 
+* Poté půjdete na WEB vašeho projektu a kliknete na "Build" a poté na "Realtime database" a kliknete na "Create Database" zde si vybere "United States", dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko "Enable". Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce Rules a zde budete mít vypsané toto:
     
     ```
     {
@@ -42,11 +41,11 @@
      }
    }
    
-a kliknete na "Publish".
-Tutoriál na propojení vašeho projektu s FIREBASE:
+* a kliknete na "Publish".
+* Tutoriál na propojení vašeho projektu s FIREBASE:
 https://www.youtube.com/watch?v=nep85PD8U7M
 
- Pokud vám nebude svítit zelená šipka u "Add the Realtime Database to your app", budete si dané importy muset ručně nahrát. Naimportujeme tak, že si zkopírujeme daný    požadavek a vložíme jej do Grandle Scripts-> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete do "dependencies".
+* Pokud vám nebude svítit zelená šipka u "Add the Realtime Database to your app", budete si dané importy muset ručně nahrát. Naimportujeme tak, že si zkopírujeme daný  požadavek a vložíme jej do Grandle Scripts-> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete do "dependencies".
 
 # Nastavení manifestu
 
