@@ -520,7 +520,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 </ScrollView>
 
 ``` 
-# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho add_recept
+# Layout stránka `add_recept` 
+* Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho add_recept
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -635,7 +636,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ``` 
-# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho edit_activity
+# Layout stránka `edit_activity`
+* Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho edit_activity
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -762,7 +764,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 
 ``` 
-# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho recepts
+#  Layout stránka `recepts` 
+* Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho recepts
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -814,7 +817,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 </androidx.constraintlayout.widget.ConstraintLayout>
 
 ``` 
-# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho single_view_layout
+# Layout stránka `single_view_layout`
+* Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho single_view_layout
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
