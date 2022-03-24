@@ -106,7 +106,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
        
 * Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:     
   
-  ```     
+```     
  public class AddRecept extends AppCompatActivity {
         
     EditText nazev, suroviny, postup; // Zde si definujete vaše layout stránky
