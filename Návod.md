@@ -433,7 +433,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 
 
-# Budete si muset vytvořit layout stránky. Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho Activity
+# Layout stránka `Activity` 
+* Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho Activity
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
