@@ -19,7 +19,7 @@
  ![Empty Activity](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/empty_acitivty.png?raw=true)
     
 # Vytvoření projektu ve FIREBASE 
-* Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte váš název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
+* Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
     
 # Vytvoření Třídy
 * Každá třída bude sloužit jak aktivita pro zobrazení nějaké stránky nebo pro přídání receptů atd... .
