@@ -48,9 +48,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 * Pokud vám nebude svítit zelená šipka u "Add the Realtime Database to your app", budete si dané importy muset ručně nahrát. Naimportujeme tak, že si zkopírujeme daný  požadavek a vložíme jej do Grandle Scripts-> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete do "dependencies".
 
 # Nastavení manifestu
-* Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu 
-    
-    //Definujeme to pomocí
+* Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu.
+* Definujeme to pomocí
     ```
     <activity android:name=".AddRecept"/> ".AddRecept - je název třídy." 
 
