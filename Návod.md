@@ -20,7 +20,8 @@
 * Každou třídu si vytvoříme následovně, ve složce kde je i Třída MainActivity ("java->com.example.databaseid"), a na danou složku klikneme pravým a dáme New->Java Class a pojmenujete ji například `AddRecept`.
 
 # Vytvoření Layoutu
-* Budete si muset vytvořit vzhled jednotlivých stránek, v levém panelu přejdeme do "res->layout->activity_main.xml" v pravé horní části si můžete vybrat, jak chcete xml soubor zobrazovat, doporučuji používat zobrazení "Design" pro přidání objektů na stránku pomocí přetahování objektů z části vlevo od levé obrazovky, a potom používat "Split" na následnout úpravu objektů pomocí kódu. Nezapomeňte každý objekt po přidání ukotvit pomocí teček na stranách objektu.
+* Budete si muset vytvořit vzhled jednotlivých stránek, v levém panelu přejdeme do "res->layout" zde kliknete pravým tlačítkem na layout a vytvoříte si nový layout 
+* V pravé horní části si můžete vybrat, jak chcete xml soubor zobrazovat, doporučuji používat zobrazení "Design" pro přidání objektů na stránku pomocí přetahování objektů z části vlevo od levé obrazovky, a potom používat "Split" na následnout úpravu objektů pomocí kódu. Nezapomeňte každý objekt po přidání ukotvit pomocí teček na stranách objektu.
  
  
 # Importy ve třídách
