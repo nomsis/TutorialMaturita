@@ -25,6 +25,8 @@
 * Každá třída bude sloužit jak aktivita pro zobrazení nějaké stránky nebo pro přídání receptů atd... .
 * Každou třídu si vytvoříme následovně, ve složce kde je i Třída MainActivity ("java->com.example.databaseid"), a na danou složku klikneme pravým a dáme New->Java Class a pojmenujete ji například `AddRecept`.
 
+![Nová Třída](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/nova_trida2.png?raw=true)
+
 # Vytvoření Layoutu
 * Budete si muset vytvořit vzhled jednotlivých stránek, v levém panelu přejdeme do "res->layout" zde kliknete pravým tlačítkem na layout a vytvoříte si nový layout 
 
