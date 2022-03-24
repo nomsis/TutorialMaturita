@@ -28,7 +28,7 @@
 ![Nová Třída](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/nova_trida2.png?raw=true)
 
 # Vytvoření Layoutu
-* Budete si muset vytvořit vzhled jednotlivých stránek, v levém panelu přejdeme do "res->layout" zde kliknete pravým tlačítkem na layout a vytvoříte si nový layout 
+* Budete si muset vytvořit vzhled jednotlivých stránek, v levém panelu přejdeme do "res->layout" zde kliknete pravým tlačítkem na layout a vytvoříte si nový layout, jednotlivé kódy layout stránek můžete vidět na konci projektu. Bude se jednat o `Activity` , `add_recept`, `edit_activity` , `recepts`  a jako poslední `single_view_layout`, takto si pojmenujete jednotlivé layout stránky
 
 ![Vytvoření Layout stránky](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/nove_xml.png?raw=true)
 
