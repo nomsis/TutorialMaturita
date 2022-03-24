@@ -412,7 +412,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     return true;} 
     
 * Nastavení položek v menu:
-   
+    ```
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
     
     switch (item.getItemId()) {
