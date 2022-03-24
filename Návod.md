@@ -11,7 +11,7 @@
     
 # Vytvoření projektu v Android Studiu 
    
-    Vytvoříme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
+ * Vytvoříme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
     
 # Vytvoření projektu ve FIREBASE
  
