@@ -62,7 +62,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
  
 
 # Třída Recept
-* Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. Bude to vypadat takhle:   
+* Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. 
+* Bude to vypadat takhle:   
     
     ```
     public class Recept { 
