@@ -253,9 +253,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         }
    }
     
-``` 
-# Třída EditActivity   
 
+# Třída EditActivity   
 * V této třídě jsou funkce na editování a mazání dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.   
    
 ```
