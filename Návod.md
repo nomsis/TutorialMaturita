@@ -49,14 +49,13 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 # Nastavení manifestu
 * Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu.
-* Definujeme to pomocí
+* Definujeme to pomocí:
     ```
     <activity android:name=".AddRecept"/> ".AddRecept - je název třídy." 
 
 # Extends AppCompatActivity  
-  
-    Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost             nastavíme pomocí "extends". `public class MainActivity extends AppCompatActivity`, `public class Activity extends AppCompatActivity`, `public class AddRecept            extends AppCompatActivity`, `public class EditActivity extends AppCompatActivity`
-    a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. 
+* Nastavíme třídu aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost            nastavíme pomocí "extends". `public class MainActivity extends AppCompatActivity`, `public class Activity extends AppCompatActivity`, `public class AddRecept            extends AppCompatActivity`, `public class EditActivity extends AppCompatActivity`
+* a také ji musíte naimportovat, pokud ji nenaimportujete bude vám to házet chybu. 
     Import vypadá takto:
     
     `import androidx.appcompat.app.AppCompatActivity;`
