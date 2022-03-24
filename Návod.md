@@ -11,6 +11,7 @@
     
 # Vytvoření projektu v Android Studiu   
 * Vytvoříme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
+
  ![Empty Activity](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/empty_acitivty.png?raw=true)
     
 # Vytvoření projektu ve FIREBASE 
