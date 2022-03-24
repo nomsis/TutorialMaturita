@@ -5,7 +5,10 @@
 * Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku          Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. Android studio si můžete stáhnout zde: https://developer.android.com/studio 
 
 # Výběr databáze  
-* Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. Databáze je zdarma, ale doporučuji zkontrolovat po     vytvoření projektu ve Firebase, že vedle názvu máte "Spark plan" což znamená, že nebudete platit žádné poplatky. Ale jsou zde nějaké omezení, které si můžete           přečíst zde: https://firebase.google.com/pricing
+* Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. Databáze je zdarma, ale doporučuji zkontrolovat po     vytvoření projektu ve Firebase, že vedle názvu máte "Spark plan" což znamená, že nebudete platit žádné poplatky.
+
+![Spark Plán](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Spark%20plan.PNG?raw=true)
+* Ale jsou zde nějaké omezení, které si můžete           přečíst zde: https://firebase.google.com/pricing
 * Budete si muset vytvořit účet zde, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE:
   https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
     
