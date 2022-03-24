@@ -100,9 +100,10 @@ https://www.youtube.com/watch?v=nep85PD8U7M
  
 
 # Ukládání dat do vaší databáze
-* Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `"AddRecept"` a v ní mám funkci, která mi zapisuje data do databáze a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
+* Již máme vytvořenou a propojenou databázi s vaším projektem v android studiu, tak budete potřebovat jak uložit data do dané databáze. Pokud máte již vytvořený nějaký layout a třídu tak budete potřebovat následující kódy do vaší třídy abyste nahráli data do vaší databáze. 
+* Vytvoříme si třídu, kterou budeme potřebovat na vkládání dat do databáze a v ní si uděláme funkci, která to zapisování bude dělat. Já mám vytvořenou třídu `AddRecept` a v ní mám funkci, která mi zapisuje data do databáze a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
       
-Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
+* Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:  
     
   ```     
  public class AddRecept extends AppCompatActivity {
@@ -154,10 +155,9 @@ Celá třída vypadá nějak takto a v ní si úkažeme co tam všechno mám:
   }
 ``` 
 # Výpis dat z databáze
+* Výpis se bude skládat ze dvou částí první část bude ve třídě `MainActivity` a druhá část se bude skládat ze třídy `ReceptAdapter`. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
     
-    Výpis se bude skládat ze dvou částí první část bude ve třídě `MainActivity` a druhá část se bude skládat ze třídy `ReceptAdapter`. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
-    
-Třída `MainActivity` se bude skládat z:
+* Třída `MainActivity` se bude skládat z:
 
  ``` 
    public class MainActivity extends AppCompatActivity {
@@ -212,7 +212,7 @@ Třída `MainActivity` se bude skládat z:
     }
     }
   ```               
-# Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvořit a pojmenujete ji `ReceptAdapter` : 
+* Druhá část výpisu dat, která je ve třídě, kterou si budete muset vytvořit a pojmenujete ji `ReceptAdapter` : 
   ``` 
    public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
    
@@ -254,7 +254,7 @@ Třída `MainActivity` se bude skládat z:
     
 ``` 
 # Třída EditActivity   
-   V této třídě jsou funkce na editování a mazání dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.   
+* V této třídě jsou funkce na editování a mazání dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.   
    
 ```
    public class EditActivity extends AppCompatActivity {
@@ -304,8 +304,8 @@ Třída `MainActivity` se bude skládat z:
     }
 ```    
 # Mazání dat   
-    V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu `EditActivity` v které mám funkce na mazání a upravování dat. 
-    Funkce vypadá takto a přidáte ji do třídy `EditActivity`.
+* V tomto podbodu si ukážeme jak se mažou data z vaší databáze. Já jsem si vytvořil třídu `EditActivity` v které mám funkce na mazání a upravování dat. 
+* Funkce vypadá takto a přidáte ji do třídy `EditActivity`.
 ```      
     public void odstranitData(View view){         
   recept = new Recept(); // Zde si vytvoříme novou instanci třídy Recept.
@@ -320,7 +320,7 @@ Třída `MainActivity` se bude skládat z:
     }
 ``` 
 # Úprava dat    
-    V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i mazání dat mám v jedné tříde `EditActivity`, kde danou funkci vložíte.     
+* V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i mazání dat mám v jedné tříde `EditActivity`, kde danou funkci vložíte.     
 ```   
    
    public void editDat(View view) {        
@@ -342,10 +342,9 @@ Třída `MainActivity` se bude skládat z:
 
 ```  
 # Třída Activity
-    
-    Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozlik mám samostatnou funkci a      také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
+* Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozlik mám samostatnou funkci a      také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
 
-    Třídá vypadá nějak takto:
+* Třídá vypadá nějak takto:
 ```  
 
     public class Activity extends AppCompatActivity {
@@ -398,10 +397,11 @@ Třída `MainActivity` se bude skládat z:
 
 ```
 # Tvorba Menu
-    Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do složky, kterou jsme vytvořili, uděláme layout, který vytvoříme kliknutím na       naši složku a dáme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
-    Po vytvoření vašeho layoutu, klikneme vpravo nahoře na "Design" a zde přetáhneme zleva "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako     název položky v menu. V našem případě nastavíme na "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy         zobrazena app:showAsAction="always". Zobrazení menu voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"`,                 `"Activity"`, `"EditActivity"` a `"MainActivity"`
+* Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do složky, kterou jsme vytvořili, uděláme layout, který vytvoříme kliknutím na       naši složku a dáme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
+* Po vytvoření vašeho layoutu, klikneme vpravo nahoře na "Design" a zde přetáhneme zleva "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako     název položky v menu. V našem případě nastavíme na "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy         zobrazena app:showAsAction="always". 
+ * Zobrazení menu voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"`,`"Activity"`, `"EditActivity"` a `"MainActivity"`
    
-    Zobrazeni menu pomocí kódu: 
+ * Zobrazeni menu pomocí kódu: 
     
     ```
     public boolean onCreateOptionsMenu(Menu menu){
@@ -410,7 +410,7 @@ Třída `MainActivity` se bude skládat z:
     inflater.inflate(R.menu.main_menu, menu); // main_menu" je název našeho menu 
     return true;} 
     
-    Nastavení položek v menu:
+* Nastavení položek v menu:
    
     public boolean onOptionsItemSelected(@NonNull MenuItem item) {
     
