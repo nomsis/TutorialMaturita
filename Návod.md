@@ -40,7 +40,7 @@
 ![Import](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/importt.png?raw=true)
 
 # Propojení android studia s vaším vytvořeným projektem ve FIREBASE
-* V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte Realtime database a zvolíte "Get Started with Realtime Database". Poté kliknete na "Connect to Firebase" zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". 
+* V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si zvolíte "Realtime database" a zvolíte "Get Started with Realtime Database". Poté kliknete na "Connect to Firebase" zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". 
 
 ![Tools](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Tools.png?raw=true)
 ![GetStartedWithRealtimeDatabase](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/GetStartedWithRealtimeDatabase.PNG?raw=true)
