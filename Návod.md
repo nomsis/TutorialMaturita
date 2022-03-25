@@ -1,5 +1,5 @@
 # Začátek
-* Začátek pro všechny čtenáře je to tutoriál na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu        byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je    můžete upravit a nakonec i smazat. 
+* Pro všechny čtenáře je to návod na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky němu byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je můžete upravit a nakonec i smazat. 
 
 # Výběr programu na aplikace    
 * Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku          Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. Android studio si můžete stáhnout zde: https://developer.android.com/studio 
