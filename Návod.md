@@ -53,6 +53,10 @@
 ![Builds](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Build.PNG?raw=true)
 
 * Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete projekt, který jste si již vytvořili a propojíte ho. Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. 
+
+![Nový Projekt](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/add%20project.png?raw=true)
+
+
 * Poté půjdete na WEB vašeho projektu a kliknete na "Build" a poté na "Realtime database" a kliknete na "Create Database" zde si vybere "United States", dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko "Enable". Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce Rules a zde budete mít vypsané toto:
     
     ```
