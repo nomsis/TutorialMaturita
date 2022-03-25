@@ -56,6 +56,12 @@
 
 ![Nový Projekt](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/add%20project.png?raw=true)
 
+![SDK to your app](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/ADDrealtimedatabase.PNG?raw=true)
+
+![Accept Changes](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Pokud%20to%20nepujde%20mosis%20nahrat%20rucne.PNG?raw=true)
+
+![Accept Changes 2x](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/accept%20changes.PNG?raw=true)
+
 
 * Poté půjdete na WEB vašeho projektu a kliknete na "Build" a poté na "Realtime database" a kliknete na "Create Database" zde si vybere "United States", dá se říci, že je to jedno co si vyberete jelikož je to místo, kde se budou ukládat vaše data. A jako druhé si zvolíte "Start in test mode" a kliknete na tlačítko "Enable". Budete mít databázi vytvořenou a musíte změnit jednu věc a tu najdete v položce Rules a zde budete mít vypsané toto:
     
