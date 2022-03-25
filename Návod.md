@@ -496,6 +496,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 # Layout stránka `Activity` 
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho Activity
+
+![Activity Obrázek](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/activity%20obrazek.PNG?raw=true)
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
@@ -583,6 +585,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 ``` 
 # Layout stránka `add_recept` 
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho add_recept
+
+![Přidání receptu](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/pridani%20receptu.PNG?raw=true)
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
@@ -699,6 +703,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 ``` 
 # Layout stránka `edit_activity`
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho edit_activity
+
+![Editování](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/%C3%BAprava.PNG?raw=true)
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -827,6 +833,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 ``` 
 #  Layout stránka `recepts` 
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho recepts
+
+![Úvodní Obrazovka](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Uvodni.PNG?raw=true)
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
@@ -880,6 +888,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 ``` 
 # Layout stránka `single_view_layout`
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho single_view_layout
+
+![Po přidání receptu](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/po%20pridanii.PNG?raw=true)
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.cardview.widget.CardView
