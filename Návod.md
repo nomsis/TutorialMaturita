@@ -458,6 +458,9 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 ![Menu](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/menu_soubory.png?raw=true)
 
 * Po vytvoření vašeho layoutu, klikneme vpravo nahoře na "Design" a zde přetáhneme zleva "Menu Item" a přejdeme do kódu. Hodnota atributu "android:title" slouží jako     název položky v menu. V našem případě nastavíme na "home", nastavíme položce atribut "id" android:id="@+id/home" a dále přidáme atribut, aby byla položka vždy         zobrazena app:showAsAction="always". 
+
+![Menu Ukázka](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Menu%20ukazka.PNG?raw=true)
+
  * Zobrazení menu voláme ve třídě, kde potřebujeme menu zobrazit, v našem případě to bude například v `"AddRecept"`,`"Activity"`, `"EditActivity"` a `"MainActivity"`
    
  * Zobrazeni menu pomocí kódu: 
