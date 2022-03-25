@@ -70,7 +70,7 @@
 ![Create Database](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/CreateDatabse.PNG?raw=true)
 ![Test Mode](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/TestMode.PNG?raw=true)
 
-    ```
+    
     {
        "rules": {
           ".read": "now < 1644879600000",  // 2022-2-15
