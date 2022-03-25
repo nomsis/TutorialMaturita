@@ -89,6 +89,9 @@
    }
    
 * a kliknete na "Publish".
+
+![Publish](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Publish.PNG?raw=true)
+
 * Tutoriál na propojení vašeho projektu s FIREBASE:
 https://www.youtube.com/watch?v=nep85PD8U7M
 
