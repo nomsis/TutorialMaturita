@@ -67,6 +67,7 @@
 
 ![Rozklik na Build](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/klik%20na%20build.PNG?raw=true)
 ![Rozklik na Realtime](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/klik%20na%20realtimedatabasee.PNG?raw=true)
+![Create Database](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/CreateDatabse.PNG?raw=true)
 
     
     ```
