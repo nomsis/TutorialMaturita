@@ -98,7 +98,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 ![Propojene](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Propojene.PNG?raw=true)
 ![Změny](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Pokud%20to%20nepujde%20mosis%20nahrat%20rucne.PNG?raw=true)
-* Tyto importy si budete muset zkopírat a vložit jej do Grandle Scripts-> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete do "dependencies".
+* Tyto importy si budete muset zkopírat a vložit jej do Grandle Scripts-> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete do "dependencies". Jakmile budete mít obě šipky zelené projekt máte propojený a můžete pokračovat v dalších podbodech.
 
 # Nastavení manifestu
 * Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu.
