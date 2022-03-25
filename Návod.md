@@ -94,7 +94,11 @@
 * Tutoriál na propojení vašeho projektu s FIREBASE:
 https://www.youtube.com/watch?v=nep85PD8U7M
 
-* Pokud vám nebude svítit zelená šipka u "Add the Realtime Database to your app", budete si dané importy muset ručně nahrát. Naimportujeme tak, že si zkopírujeme daný  požadavek a vložíme jej do Grandle Scripts-> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete do "dependencies".
+* Pokud vám nebude svítit zelená šipka u "Add the Realtime Database to your app", budete si dané importy muset ručně nahrát.
+
+![Propojene](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Propojene.PNG?raw=true)
+![Změny](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Pokud%20to%20nepujde%20mosis%20nahrat%20rucne.PNG?raw=true)
+* Tyto importy si budete muset zkopírat a vložit jej do Grandle Scripts-> build.grandle(Module a název vašeho projektu) a zde si ho naimplemenujete do "dependencies".
 
 # Nastavení manifestu
 * Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu.
