@@ -70,7 +70,6 @@
 ![Create Database](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/CreateDatabse.PNG?raw=true)
 ![Test Mode](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/TestMode.PNG?raw=true)
 
-    
     ```
     {
        "rules": {
