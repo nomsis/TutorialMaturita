@@ -112,6 +112,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     Import vypadá takto:
     
     `import androidx.appcompat.app.AppCompatActivity;`
+    
+    ![AppCompatActivity](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/AppCompatACTIVITY.PNG?raw=true)
  
 
 # Třída Recept
