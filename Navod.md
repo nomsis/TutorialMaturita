@@ -8,7 +8,7 @@
 * Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. Databáze je zdarma, ale doporučuji zkontrolovat po     vytvoření projektu ve Firebase, že vedle názvu máte "Spark plan" což znamená, že nebudete platit žádné poplatky.
 
 ![Spark Plán](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Spark%20plan.PNG?raw=true)
-* Ale jsou zde nějaké omezení, které si můžete           přečíst zde: https://firebase.google.com/pricing
+* Ale jsou tam nějaké omezení, které si můžete přečíst zde: https://firebase.google.com/pricing
 * Budete si muset vytvořit účet zde, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE:
   https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
     
