@@ -23,7 +23,7 @@
     
 # Vytvoření Třídy
 * Všechny třídy budou sloužit, jako aktivita pro zobrazení nějaké stránky nebo pro přídání receptů atd... .
-* Každou třídu si vytvoříme následovně, ve složce kde je i Třída MainActivity ("java->com.example.databaseid"), a na danou složku klikneme pravým a dáme "New->Java Class" a pojmenujete ji například `AddRecept`,`Recept`, `EditActivity`, `Activity`, `ReceptAdapter`.
+* Každou třídu si vytvoříme následovně, ve složce kde je i Třída MainActivity ("java->com.example.databaseid"), a na danou složku klikneme pravým a dáme "New->Java Class" a v našem případě je pojmenujete `AddRecept`,`Recept`, `EditActivity`, `Activity`, `ReceptAdapter`.
 
 ![Nová Třída](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/nova_trida2.png?raw=true)
 
