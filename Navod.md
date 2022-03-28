@@ -13,7 +13,7 @@
   https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
     
 # Vytvoření projektu v Android Studiu   
-* Vytvoříme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
+* Uděláme si nový projekt v Android Studiu File->New->New Project a zvolíme si "Empty Activity".
  
  ![Nový projekt](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/file.png?raw=true)
  ![Empty Activity](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/empty_acitivty.png?raw=true)
