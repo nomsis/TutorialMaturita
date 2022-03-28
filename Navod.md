@@ -480,21 +480,14 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
     switch (item.getItemId()) {
     case R.id.home: //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu 
-    Intent ht1 = new Intent(Activity.this, MainActivity.class); 
+    Intent ht1 = new Intent(Activity.this, MainActivity.class);
     startActivity(ht1);
     return true; 
     default:return super.onOptionsItemSelected(item); } }
     
     //nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu z `"Activity".` na `"MainActivity".`
-
-
-
-
-
-
-
-
-
+    
+* jako první atribut píšeme třídu ve které se nacházíme, jako druhý atribut, třídu na kterou chceme přepnout, a následně spustíme pomocí "startActivity". startActivity(intent1);
 
 # Layout stránka `activity` 
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho activity
