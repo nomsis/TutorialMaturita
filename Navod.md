@@ -9,8 +9,8 @@
 
 ![Spark Plán](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Spark%20plan.PNG?raw=true)
 * Ale jsou tam nějaké omezení, které si můžete přečíst zde: https://firebase.google.com/pricing
-* Budete si muset vytvořit účet, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE:
-  https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
+* Budete si muset vytvořit účet, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE: https://firebase.google.com/
+  
     
 # Vytvoření projektu v Android Studiu   
 * Uděláme si nový projekt v Android Studiu. "File->New->New Project" a zvolíme si "Empty Activity".
