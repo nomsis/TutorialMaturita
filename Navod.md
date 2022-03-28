@@ -487,7 +487,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
     //nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu z `"Activity".` na `"MainActivity".`
     
-* jako první atribut píšeme třídu ve které se nacházíme, jako druhý atribut, třídu na kterou chceme přepnout, a následně spustíme pomocí "startActivity". startActivity(intent1);
+* Intent ht1 = jako první atribut píšeme třídu ve které se nacházíme, jako druhý atribut, třídu na kterou chceme přepnout, a následně spustíme pomocí "startActivity". startActivity(intent1);
 
 # Layout stránka `activity` 
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho activity
