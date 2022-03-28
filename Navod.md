@@ -376,7 +376,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     }
 ``` 
 # Úprava dat    
-* V tomto podbodu si ukážeme jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i mazání dat mám v jedné tříde `EditActivity`, kde danou funkci vložíte.     
+* Zde si ukážeme, jak se editují/upravují vaše data v databázi. Jak jsem již zmínil úpravu i mazání dat mám v jedné třídě `EditActivity`, kde danou funkci vložíte.     
 ```   
    
    public void editDat(View view) {        
@@ -398,7 +398,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 ```  
 # Třída Activity
-* Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozlik mám samostatnou funkci a      také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
+* Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozkliknutí má samostatnou funkci a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
 
 * Třídá vypadá nějak takto:
 ```  
