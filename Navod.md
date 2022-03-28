@@ -951,6 +951,45 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 
 
+public class ReceptAdapter extends FirebaseRecyclerAdapter<Recept, ReceptAdapter.receptViewholder> {
+
+    public ReceptAdapter(@NonNull FirebaseRecyclerOptions<Recept> options) {
+        super(options);
+    }
+
+    @Override
+    protected void onBindViewHolder(@NonNull receptViewholder holder, int position, Recept model) {
+        holder.nazev.setText(model.getNazev());
+
+    }
+
+    public receptViewholder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+        View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.single_view_layout, parent, false);
+        return new ReceptAdapter.receptViewholder(view);
+    }
+
+    class receptViewholder extends RecyclerView.ViewHolder   {
+        TextView nazev;
+        public receptViewholder(@NonNull View itemView)
+        {
+            super(itemView);
+            nazev= itemView.findViewById(R.id.Nazev);
+
+            itemView.findViewById(R.id.btnRozklik).setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Intent ht1 = new Intent( view.getContext(), Activity.class);
+                    ht1.putExtra("nazev", nazev.getText());
+                    view.getContext().startActivity(ht1);
+
+                    FirebaseDatabase.getInstance().getReference().child("Recept");
+                }
+            });
+        }
+    }
+}
+
+
     
     
    
