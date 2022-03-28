@@ -508,6 +508,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho activity
 
 ![Activity Obrázek](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/activity%20obrazek.PNG?raw=true)
+
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
@@ -592,7 +593,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     </LinearLayout>
 </ScrollView>
 
-``` 
+
 # Layout stránka `add_recept` 
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho add_recept
 
