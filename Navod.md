@@ -83,8 +83,8 @@
     "rules": {
     ".read": true,
     ".write": true
-     }
-   }
+     }}
+   
    
 * a kliknete na "Publish".
 
