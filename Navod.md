@@ -2,7 +2,7 @@
 * Pro všechny čtenáře je to návod na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky ní byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je můžete upravit a nakonec i smazat. 
 
 # Výběr programu na aplikace    
-* Na tvorbu aplikace jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku          Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. Android studio si můžete stáhnout zde: https://developer.android.com/studio 
+* Na tvorbu jsem si zvolil program Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku          Java a nebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. Android studio si můžete stáhnout zde: https://developer.android.com/studio 
 
 # Výběr databáze  
 * Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. Databáze je zdarma, ale doporučuji zkontrolovat po     vytvoření projektu ve Firebase, že vedle názvu máte "Spark plan" což znamená, že nebudete platit žádné poplatky.
