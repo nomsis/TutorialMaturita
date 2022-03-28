@@ -484,8 +484,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     Intent ht1 = new Intent(Activity.this, MainActivity.class);
     startActivity(ht1);
     return true; 
-    default:return super.onOptionsItemSelected(item); } }
-    ``` 
+    default:return super.onOptionsItemSelected(item); } } 
     
     //nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu z `"Activity".` na `"MainActivity".`
     
