@@ -78,8 +78,7 @@
        }
     }
     
-    změníte na:     
-    
+    změníte na:         
     {
     "rules": {
     ".read": true,
