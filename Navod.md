@@ -453,7 +453,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
 ```
 # Tvorba Menu
-* Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do složky, kterou jsme vytvořili, uděláme layout, který vytvoříme kliknutím na       naši složku a dáme "New->Menu Resource File" a  pojmenujeme ho "main_menu"
+* Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do ní, uděláme layout, který vytvoříme kliknutím na naši složku a dáme "New->Menu Resource File" a pojmenujeme ho "main_menu"
 
 ![Menu](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/menu_soubory.png?raw=true)
 
