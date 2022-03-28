@@ -268,7 +268,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 
     }
     }
-    }
+    
   ```               
 * Druhá část výpisu dat, která je ve třídě `ReceptAdapter`: 
   ``` 
