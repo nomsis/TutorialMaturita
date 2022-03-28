@@ -486,15 +486,6 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     return true; 
     default:return super.onOptionsItemSelected(item); } }
     ``` 
- *Nastavení položek pro MainActivity
-    ``` 
-      public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-        switch (item.getItemId()) {
-            case R.id.home: //"home" je hodnota atributu "id", které jsme si nastavili pro naše menu
-
-
-                return true;
-            default:return super.onOptionsItemSelected(item); } }
     
     //nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu z `"Activity".` na `"MainActivity".`
     
