@@ -308,15 +308,9 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         }
    }
    
-   
- implementation 'com.google.android.material:material:1.0.0'
-    implementation 'androidx.recyclerview:recyclerview:1.1.0'
-    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc01'
-    implementation 'com.google.firebase:firebase-database:20.0.3'
     
-
 # Třída EditActivity   
-* V této třídě jsou funkce na editování a mazání dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.   
+* V této třídě jsou funkce na editování a mazání dat a také si na konci tutoriálu budete muset do ní přidat zobrazení menu.   
    
 ```
    public class EditActivity extends AppCompatActivity {
