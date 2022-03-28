@@ -485,7 +485,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     startActivity(ht1);
     return true; 
     default:return super.onOptionsItemSelected(item); } }
-     
+    ``` 
  *Nastavení položek pro MainActivity
     ``` 
       public boolean onOptionsItemSelected(@NonNull MenuItem item) {
