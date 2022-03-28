@@ -93,10 +93,6 @@
 * Tutoriál na propojení vašeho projektu s FIREBASE:
 https://www.youtube.com/watch?v=nep85PD8U7M
 
-
-![Propojene](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Propojene.PNG?raw=true)
-![Změny](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Pokud%20to%20nepujde%20mosis%20nahrat%20rucne.PNG?raw=true)
-
 # Gradle Scripts
 * Tyto importy si budete muset zkopírat a vložit jej do "Gradle Scripts->build.gradle(Module: a název vašeho projektu)" a zde si ho naimplemenujete do "dependencies". Vše z dependencies vymažete a vložíte tam toto:
   ```
