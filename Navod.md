@@ -20,6 +20,8 @@
     
 # Vytvoření projektu ve FIREBASE 
 * Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
+
+![Nový Projekt](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/add%20project.png?raw=true)
     
 # Vytvoření Třídy
 * Všechny třídy budou sloužit, jako aktivita pro zobrazení nějaké stránky nebo pro přídání receptů atd... .
@@ -53,8 +55,6 @@
 ![Builds](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Build.PNG?raw=true)
 
 * Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete jiný, který jste si již vytvořili a propojíte ho. Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. 
-
-![Nový Projekt](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/add%20project.png?raw=true)
 
 ![SDK to your app](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/ADDrealtimedatabase.PNG?raw=true)
 
