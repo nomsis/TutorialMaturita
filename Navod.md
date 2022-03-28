@@ -384,10 +384,10 @@ https://www.youtube.com/watch?v=nep85PD8U7M
    
    public void editDat(View view) {        
         recept = new Recept();  // Zde si vytvoříme novou instanci třídy Recept
-        reff = FirebaseDatabase.getInstance().getReference("Recept");` // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"
-        recept.setNazev(textNazev.getText().toString().trim());` // uloží nám do proměnné Nazev ve třídě recept obsah v závorce
+        reff = FirebaseDatabase.getInstance().getReference("Recept"); // Zde si definujete v jaké struktuře chcete mít data uložena. "Recept"
+        recept.setNazev(textNazev.getText().toString().trim()); // uloží nám do proměnné Nazev ve třídě recept obsah v závorce
         recept.setSuroviny(textSuroviny.getText().toString().trim()); //uloží nám do proměnné Suroviny ve třídě recept obsah v závorce
-        recept.setPostup(textPostup.getText().toString().trim());` // uloží nám do proměnné Postup ve třídě recept obsah v závorce
+        recept.setPostup(textPostup.getText().toString().trim()); // uloží nám do proměnné Postup ve třídě recept obsah v závorce
         
         //Tato část kódu dělá to, že když chceme cokoliv změnit, tak se vymaže celý recept a vloží se tam nový s novou hodnotou. 
         reff.child(recept.getNazev()).setValue(recept);
