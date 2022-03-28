@@ -22,13 +22,13 @@
 * Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Poté zadáte název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
     
 # Vytvoření Třídy
-* Každá třída bude sloužit jak aktivita pro zobrazení nějaké stránky nebo pro přídání receptů atd... .
-* Každou třídu si vytvoříme následovně, ve složce kde je i Třída MainActivity ("java->com.example.databaseid"), a na danou složku klikneme pravým a dáme New->Java Class a pojmenujete ji například `AddRecept`.
+* Všechny třídy budou sloužit, jako aktivita pro zobrazení nějaké stránky nebo pro přídání receptů atd... .
+* Každou třídu si vytvoříme následovně, ve složce kde je i Třída MainActivity ("java->com.example.databaseid"), a na danou složku klikneme pravým a dáme "New->Java Class" a pojmenujete ji například `AddRecept`,`Recept`, `EditActivity`, `Activity`, `ReceptAdapter`.
 
 ![Nová Třída](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/nova_trida2.png?raw=true)
 
 # Vytvoření Layoutu
-* Budete si muset vytvořit vzhled jednotlivých stránek, v levém panelu přejdeme do "res->layout" zde kliknete pravým tlačítkem na layout a vytvoříte si nový layout, jednotlivé kódy layout stránek můžete vidět na konci projektu. Bude se jednat o `Activity` , `add_recept`, `edit_activity` , `recepts`  a jako poslední `single_view_layout`, takto si pojmenujete jednotlivé layout stránky
+* Budete si muset vytvořit vzhled jednotlivých stránek, v levém panelu přejdeme do "res->layout" zde kliknete pravým tlačítkem na layout a uděláme si nový layout, jednotlivé kódy layout stránek můžete vidět na konci projektu. Bude se jednat o `Activity` , `add_recept`, `edit_activity` , `recepts`  a jako poslední `single_view_layout`, takto si pojmenujete jednotlivé layout stránky
 
 ![Vytvoření Layout stránky](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/nove_xml.png?raw=true)
 
