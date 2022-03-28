@@ -211,7 +211,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
   }
 ``` 
 # Výpis dat z databáze
-* Výpis se bude skládat ze dvou částí první část bude ve třídě `MainActivity` a druhá část se bude skládat ze třídy `ReceptAdapter`. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
+* Výpis se bude skládat ze dvou částí. První část bude ve třídě `MainActivity` a druhá část se bude skládat ze třídy `ReceptAdapter`. Důležitou části je mít také vytvořený layout s recyclerView, který potřebujete na zobrazování dat a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
     
 * Třída `MainActivity` se bude skládat z:
 
