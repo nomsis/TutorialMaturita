@@ -491,6 +491,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 * Intent ht1 = jako první atribut píšeme třídu ve které se nacházíme, jako druhý atribut, třídu na kterou chceme přepnout, a následně spustíme pomocí "startActivity". startActivity(intent1);
 
 # Layout stránka `activity` 
+* Při vytvoření každého layoutu, vymažeme všechno co tam máme a nakopírujeme tento kód.
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho activity
 
 ![Activity Obrázek](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/activity%20obrazek.PNG?raw=true)
