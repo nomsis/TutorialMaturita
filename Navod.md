@@ -416,7 +416,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         Bundle b = ht2.getExtras();
         Nazev = (String) b.get("nazev");
         textNazev = findViewById(R.id.textNazev);
-        TextSuroviny = findViewById(R.id.textSuroviny);
+        textSuroviny = findViewById(R.id.textSuroviny);
         textPostup = findViewById(R.id.textPostup);
         textNazev.setText(Nazev);
         reff = FirebaseDatabase.getInstance().getReference().child("Recept").child(Nazev);
