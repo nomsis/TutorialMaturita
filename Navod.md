@@ -715,7 +715,6 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho edit_activity
 
 ![Editování](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/%C3%BAprava.PNG?raw=true)
-
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout
