@@ -347,7 +347,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
                        textNazev = findViewById(R.id.editNazev);
                        textSuroviny = findViewById(R.id.editSuroviny);
                        textPostup =  findViewById(R.id.editPostup);
-                       textNazev.setText(Nazev);` // nastaví textu Nazev hodnotu, kterou jsme mu určili
+                       textNazev.setText(Nazev); // nastaví textu Nazev hodnotu, kterou jsme mu určili
                        textSuroviny.setText(Suroviny);
                        textPostup.setText(Postup);
                     }
