@@ -54,7 +54,7 @@
 
 ![Builds](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Build.PNG?raw=true)
 
-* Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete jiný, který jste si již vytvořili a propojíte ho. Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" budete muset kliknout 2x. 
+* Po rozkliknutí "connect to Firebase" vás to odkáže na web Firebase, kde si budete muset vytvořit projekt, a nebo si vyberete jiný, který jste si již vytvořili a propojíte ho. Poté v android studiu budete mít "Add the Realtime Database SDK to your app" a zvolíte "accept changes" pokud se vám to nepodaří zkuste kliknout 2x na "accept changes". 
 
 ![SDK to your app](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/ADDrealtimedatabase.PNG?raw=true)
 
