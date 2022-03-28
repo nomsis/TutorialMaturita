@@ -93,11 +93,29 @@
 * Tutoriál na propojení vašeho projektu s FIREBASE:
 https://www.youtube.com/watch?v=nep85PD8U7M
 
-* Pokud vám nebude svítit zelená šipka u "Add the Realtime Database to your app", budete si dané importy muset ručně nahrát.
 
 ![Propojene](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Propojene.PNG?raw=true)
 ![Změny](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Pokud%20to%20nepujde%20mosis%20nahrat%20rucne.PNG?raw=true)
-* Tyto importy si budete muset zkopírat a vložit jej do Grandle Scripts-> build.gradle(Module: a název vašeho projektu) a zde si ho naimplemenujete do "dependencies". Jakmile budete mít obě šipky zelené projekt máte propojený a můžete pokračovat v dalších podbodech.
+
+# Gradle Scripts
+* Tyto importy si budete muset zkopírat a vložit jej do "Gradle Scripts->build.gradle(Module: a název vašeho projektu)" a zde si ho naimplemenujete do "dependencies". Vše z dependencies vymažete a vložíte tam toto:
+  ```
+    implementation 'androidx.appcompat:appcompat:1.3.1'
+    implementation 'com.google.android.material:material:1.4.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.1'
+    implementation 'androidx.navigation:navigation-fragment:2.3.5'
+    implementation 'androidx.navigation:navigation-ui:2.3.5'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'com.firebaseui:firebase-ui-database:6.2.0'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.1.0'
+    implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc01'
+    implementation 'com.google.firebase:firebase-database:20.0.3'
+    
+ ![Gradle Scripts](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Grandle%20Scripts.PNG?raw=true)
+ ![Dependencies](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Depedencies.PNG?raw=true)
 
 # Nastavení manifestu
 * Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu.
