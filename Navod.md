@@ -37,7 +37,7 @@
 * V pravé horní části si můžete vybrat, jak chcete xml soubor zobrazovat, doporučuji používat zobrazení "Design" pro přidání objektů na stránku pomocí přetahování objektů z části vlevo od levé obrazovky, a potom používat "Split" na následnout úpravu objektů pomocí kódu. Nezapomeňte každý objekt po přidání ukotvit pomocí teček na stranách objektu.
  
 # Propojení android studia s vaším vytvořeným projektem ve FIREBASE
-* V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si navolíte "Realtime database" a zvolíte "Get Started with Realtime Database". Poté kliknete na "Connect to Firebase" zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". A poté budete muset znovu kliknout na "Connect to Firebase".
+* V android studiu na kartě si zvolíte "Tools->FIREBASE". Zde se vám objeví okno, kde si navolíte "Realtime database" a zvolíte "Get Started with Realtime Database". Pak kliknete na "Connect to Firebase" zeptá se vás to na hlášku, kterou potvrdíte tlačítkem "build". A poté budete muset znovu kliknout na "Connect to Firebase".
 
 ![Tools](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Tools.png?raw=true)
 
