@@ -124,7 +124,11 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     `import androidx.appcompat.app.AppCompatActivity;`
     
     ![AppCompatActivity](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/AppCompatACTIVITY.PNG?raw=true)
- 
+
+# Importy ve třídách
+* Pokud napíšete kód a bude vám svítit červeně, stačí najet myší a kliknout na něj a zmáčknou alt + enter a zvolíte Import Class, tak si naimportujete všechny        důležité věci co potřebujete, aby vám projekt správně fungoval.
+
+![Import](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/importt.png?raw=true) 
 
 # Třída Recept
 * Třídu recept potřebujeme k vytvoření proměnných String, konstruktoru a metody pro získávání dat z databáze. 
