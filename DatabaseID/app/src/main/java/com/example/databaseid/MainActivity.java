@@ -32,10 +32,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.recepts);
         reff = FirebaseDatabase.getInstance().getReference("Recept");
         recyclerView = findViewById(R.id.recyclerRecepts);
-
         recyclerView.setLayoutManager(
                 new LinearLayoutManager(this));
-
 
         FirebaseRecyclerOptions<Recept> options1
                 = new FirebaseRecyclerOptions.Builder<Recept>()

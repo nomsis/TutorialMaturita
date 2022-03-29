@@ -41,7 +41,6 @@ public class EditActivity extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot){
 
                 try {
-
                     if(dataSnapshot.exists())
                     {
                         Nazev = dataSnapshot.child("nazev").getValue().toString();
@@ -57,13 +56,9 @@ public class EditActivity extends AppCompatActivity {
                         textPostup.setText(Postup);
 
                     }
-
                 }catch (NullPointerException e){
                     e.printStackTrace();
                 }
-
-
-
 
             }
 
@@ -99,31 +94,27 @@ public class EditActivity extends AppCompatActivity {
     }
 
     public void editDat(View view) {
-
         recept = new Recept();
         reff = FirebaseDatabase.getInstance().getReference("Recept");
-
 
         recept.setNazev(textNazev.getText().toString().trim());
         recept.setSuroviny(textSuroviny.getText().toString().trim());
         recept.setPostup(textPostup.getText().toString().trim());
 
-
-
         reff.child(recept.getNazev()).setValue(recept);
         if(!nazev2.equals(recept.getNazev()))
 
-          reff.child(nazev2).removeValue();
+            reff.child(nazev2).removeValue();
 
         Toast.makeText(EditActivity.this, "Aktualizuji data.", Toast.LENGTH_SHORT).show();
         Intent ht1 = new Intent(EditActivity.this, MainActivity.class);
         startActivity(ht1);
-
     }
-    public void odstranitData(View view){
+
+    public void odstranitData(View view)
+    {
         recept = new Recept();
         reff = FirebaseDatabase.getInstance().getReference("Recept");
-
 
         recept.setNazev(null);
         recept.setSuroviny(null);
@@ -134,10 +125,7 @@ public class EditActivity extends AppCompatActivity {
         Toast.makeText(EditActivity.this, "Mažu data.", Toast.LENGTH_SHORT).show();
         Intent ht1 = new Intent(EditActivity.this, MainActivity.class);
         startActivity(ht1);
-
     }
-
-
 
 }
 

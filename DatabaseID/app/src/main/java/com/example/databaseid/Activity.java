@@ -37,16 +37,11 @@ public class Activity extends AppCompatActivity {
 
         textNazev.setText(Nazev);
 
-
         reff = FirebaseDatabase.getInstance().getReference().child("Recept").child(Nazev);
         reff.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot){
-
-
-
                 try {
-
                     if(dataSnapshot.exists())
                     {
                         Postup  = dataSnapshot.child("postup").getValue().toString();
@@ -56,24 +51,15 @@ public class Activity extends AppCompatActivity {
                         textSuroviny.setText(Suroviny);
                         textPostup.setText(Postup);
                     }
-
-
                 }
                 catch (NullPointerException e){
                     e.printStackTrace();
                 }
-
-
-
             }
-
             @Override
             public void onCancelled(@NonNull DatabaseError databaseError){
-
             }
-
         });
-
     }
 
 
@@ -101,10 +87,7 @@ public class Activity extends AppCompatActivity {
         Intent ht2 = new Intent(Activity.this, EditActivity.class);
         ht2.putExtra("nazev2", Nazev);
         startActivity(ht2);
-
     }
-
-
 }
 
 
