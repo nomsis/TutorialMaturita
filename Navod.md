@@ -9,8 +9,8 @@
 
 ![Spark Plán](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Spark%20plan.PNG?raw=true)
 * Ale jsou tam nějaké omezení, které si můžete přečíst zde: https://firebase.google.com/pricing
-* Budete si muset vytvořit účet, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE:
-  https://firebase.google.com/?gclid=Cj0KCQiAoY-PBhCNARIsABcz7707gg2dCuHahe9rnnYzMkrsscrEN24fhgT1fr7SYOeCqQLy3-J13u0aAtLAEALw_wcB&gclsrc=aw.ds 
+* Budete si muset vytvořit účet, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE: https://firebase.google.com/
+  
     
 # Vytvoření projektu v Android Studiu   
 * Uděláme si nový projekt v Android Studiu. "File->New->New Project" a zvolíme si "Empty Activity".
@@ -104,17 +104,20 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     implementation 'androidx.recyclerview:recyclerview:1.1.0'
     implementation 'androidx.recyclerview:recyclerview-selection:1.1.0-rc01'
     implementation 'com.google.firebase:firebase-database:20.0.3'
+    ```
     
- ![Gradle Scripts](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Grandle%20Scripts.PNG?raw=true)
- ![Dependencies](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Depedencies.PNG?raw=true)
+![Gradle Scripts](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Grandle%20Scripts.PNG?raw=true)
+![Dependencies](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Depedencies.PNG?raw=true)
 
 # Nastavení manifestu
 * Každou třídu, která bude sloužit jak aktivita pro zobrazení nějaké stránky, musíme definovat v manifestu.
 * Definujeme to pomocí:
+
     ```
     <activity android:name=".AddRecept"/> ".AddRecept - je název třídy." 
-    
- ![Manifest](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Manifest.PNG?raw=true)
+    ```
+
+![Manifest](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Manifest.PNG?raw=true)
 
 # Extends AppCompatActivity  
 * Nastavíme třídu, aby dědila od třídy "AppCompatActivity", je to základní třída pro aktivity, která se automaticky nachází ve vytvořeném projektu, dědičnost            nastavíme pomocí "extends". Takto budou vypadat následující třídy, které budeme potřebovat v projektu. `public class MainActivity extends AppCompatActivity`, `public class Activity extends AppCompatActivity`, `public class AddRecept extends AppCompatActivity`, `public class EditActivity extends AppCompatActivity`
@@ -126,7 +129,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     ![AppCompatActivity](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/AppCompatACTIVITY.PNG?raw=true)
 
 # Importy ve třídách
-* Pokud napíšete kód a bude vám svítit červeně, stačí najet myší a kliknout na něj a zmáčknou alt + enter a zvolíte Import Class, tak si naimportujete všechny        důležité věci co potřebujete, aby vám projekt správně fungoval.
+* Pokud napíšete kód a bude vám svítit červeně, stačí najet myší a kliknout na něj a zmáčknou alt + enter a zvolíte Import Class, tak si naimportujete všechny důležité věci co potřebujete, aby vám projekt správně fungoval.
 
 ![Import](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/importt.png?raw=true) 
 
@@ -410,9 +413,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         Intent ht1 = new Intent(EditActivity.this, MainActivity.class); // popisujeme operaci, která se má provést
         startActivity(ht1);  // startuje tu danou operaci
     }
-
-
-```  
+```
 # Třída Activity
 * Třída `Activity` nám slouží k rozlikávání jednotlivých položek, takže přidávání jednotlivých receptů, rozklik vytvořeného receptu. Rozkliknutí má samostatnou funkci a také si na konci tutoriálu budete muset do třídy přidat zobrazení menu.
 
@@ -466,8 +467,8 @@ https://www.youtube.com/watch?v=nep85PD8U7M
         ht2.putExtra("nazev2", Nazev);
         startActivity(ht2);
     }
-
 ```
+
 # Tvorba Menu
 * Ve složce "res" vytvoříme složku ("Android Resource Directory") s názvem "menu", a do ní, uděláme layout, který vytvoříme kliknutím na naši složku a dáme "New->Menu Resource File" a pojmenujeme ho "main_menu"
 
@@ -501,6 +502,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
     
     //nastavíme položkám v menu, "co mají dělat". Položce "home", která má "id=home" nastavíme, že má přepnout na třídu z `"Activity".` na `"MainActivity".`
     
+
 * Intent ht1 = jako první atribut píšeme třídu ve které se nacházíme, jako druhý atribut, třídu na kterou chceme přepnout, a následně spustíme pomocí "startActivity". startActivity(intent1);
 
 # Layout stránka `activity` 
@@ -508,6 +510,7 @@ https://www.youtube.com/watch?v=nep85PD8U7M
 * Kliknete pravým na layout "New->Layout Resource File" a pojmenujete ho activity
 
 ![Activity Obrázek](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/activity%20obrazek.PNG?raw=true)
+
 ``` 
 <?xml version="1.0" encoding="utf-8"?>
 <ScrollView
