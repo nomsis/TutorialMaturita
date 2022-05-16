@@ -2,13 +2,13 @@
 * Pro všechny čtenáře je to návod na mobilní aplikace s použití databáze FIREBASE. Jedná se o návod, který vás provede celou problematikou a díky ní byste měli být schopni udělat vlastní aplikaci s databází. Pro ukázku jsem vytvořil jednoduchou mobilní aplikaci kuchařka, do které můžete přidávat recepty, dále je můžete upravit a nakonec i smazat. 
 
 # Výběr programu na aplikace    
-* Na tvorbu jsem si zvolil aplikaci Android Studio, je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku Java anebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. Android studio si můžete stáhnout zde: https://developer.android.com/studio 
+* Na tvorbu jsem si zvolil aplikaci Android Studio. Je to jeden z nejznámějších programů na tvorbu aplikací. Můžete v něm psát v programovacím jazyku Java anebo Kotlin. Osobně jsem si vybral programovací jazyk Java, jelikož jsem již měl nějaké základy ve škole a je zde hodně věcí podobných. Android studio si můžete stáhnout zde: https://developer.android.com/studio 
 
 # Výběr databáze  
 * Jako databázi jsem si zvolil FIREBASE, jelikož je velice populární a dobře se mi s ní pracovalo již v minulosti. Databáze je zdarma, ale doporučuji zkontrolovat po     vytvoření projektu ve Firebase, že vedle názvu máte "Spark plan" což znamená, že nebudete platit žádné poplatky.
 
 ![Spark Plán](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/Spark%20plan.PNG?raw=true)
-* Ale jsou tam nějaké omezení, které si můžete přečíst zde: https://firebase.google.com/pricing
+* Jsou tam nějaké omezení, které si můžete přečíst zde: https://firebase.google.com/pricing
 * Budete si muset vytvořit účet, a když kliknete na tlačítko "Get Started" tak si vytvoříte účet na FIREBASE: https://firebase.google.com/
   
     
@@ -19,13 +19,13 @@
  ![Empty Activity](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/empty_acitivty.png?raw=true)
     
 # Vytvoření projektu ve FIREBASE 
-* Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". PAK zadáte název vaší databáze. Můžete zvolit jakýkoliv název, nejlépe aby se vám dobře pamatoval. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
+* Po přihlášení do webové stránky Firebase na odkazu výše, tak kliknete na tlačítko "+ Add project". Pak zadáte název vaší databáze. Můžete zvolit jakýkoliv název, který se vám bude dobře pamatovat. Poté si vyberete, že chcete použít účet, který jste si vytvořili a kliknete na tlačítko "create project". Jakmile se vám projekt vytvoří kliknete na tlačítko "continue". 
 
 ![Nový Projekt](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/add%20project.png?raw=true)
     
 # Vytvoření Třídy
 * Všechny třídy budou sloužit, jako aktivita pro zobrazení nějaké stránky nebo pro přídání receptů atd... .
-* Každou třídu si vytvoříme následovně, ve složce kde je i Třída MainActivity ("java->com.example.databaseid"), a na danou složku klikneme pravým a dáme "New->Java Class" a v našem případě je pojmenujete `AddRecept`,`Recept`, `EditActivity`, `Activity`, `ReceptAdapter`.
+* Každou třídu si vytvoříme následovně, ve složce kde je i Třída MainActivity ("java->com.example.databaseid"). Na danou složku klikneme pravým a dáme "New->Java Class" a v našem případě je pojmenujete `AddRecept`,`Recept`, `EditActivity`, `Activity`, `ReceptAdapter`.
 
 ![Nová Třída](https://github.com/nomsis/TutorialMaturita/blob/main/screenshots/nova_trida2.png?raw=true)
 
