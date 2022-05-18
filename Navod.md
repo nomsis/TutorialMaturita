@@ -89,7 +89,8 @@
 https://www.youtube.com/watch?v=nep85PD8U7M
 
 # Gradle Scripts
-* Tyto importy si budete muset zkopírat a vložit jej do "Gradle Scripts->build.gradle(Module: a název vašeho projektu)" a zde si ho naimplemenujete do "dependencies". Grandle Sctipts slouží ke konfiguraci vašeho projektu a implementujete si zde např. firebase database a recyclerview, bez kterého by vám projekt nefungoval, tak jak má. Vše z dependencies vymažete a vložíte tam toto:
+* Tyto importy si budete muset zkopírat a vložit jej do "Gradle Scripts->build.gradle(Module: a název vašeho projektu)" a zde si ho naimplemenujete do "dependencies". Grandle Sctipts slouží ke konfiguraci vašeho projektu a implementujete si zde např. firebase database a recyclerview, bez kterého by vám projekt nefungoval, tak jak má.
+ Vše z dependencies vymažete a vložíte tam toto:
   ```
     implementation 'androidx.appcompat:appcompat:1.3.1'
     implementation 'com.google.android.material:material:1.4.0'
